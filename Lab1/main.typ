@@ -3,17 +3,20 @@
 #set page(
 	paper: "a4"
 )
+#set text(size: 24pt, font: "Noto Sans Carian")
 
-#set text(size: 18pt)
-#align(center)[
-	#set text(size: 24pt)
-	Jacob Evans \
-	Febuary 9th, 2026 \
-	CPE 3020 - Group 4 \
-	Spring 26 \
-	Professor Tippens
+= Referree Lab
+Lab 01
+#v(230pt)
+#set text(size: 16pt)
+Designer: Jacob Evans \
+Class: CPE 3020 \
+Term: Spring 2026 \ 
+Date: 2026 - 02 - 04 \
 
-]
+
+#pagebreak()
+= Design Description
 
 #pagebreak()
 = Component Diagram
