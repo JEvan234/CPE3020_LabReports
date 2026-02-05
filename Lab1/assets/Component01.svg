@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200mm"
+   height="100mm"
+   viewBox="0 0 200 100"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   sodipodi:docname="Component01.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.050652"
+     inkscape:cx="488.26824"
+     inkscape:cy="200.35178"
+     inkscape:window-width="1920"
+     inkscape:window-height="1128"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.757977;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 166.08875,44.494732 H 40.631252"
+       id="path9"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.759983;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 82.751442,60.076412 H 40.69898"
+       id="path10"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.747453;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 81.235014,74.667799 H 40.557442"
+       id="path10-6"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.744221;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 81.113475,27.816578 H 40.786871"
+       id="path10-9"
+       sodipodi:nodetypes="cc" />
+    <rect
+       x="70.721924"
+       y="13.213573"
+       width="53.990669"
+       height="78.408409"
+       fill="none"
+       stroke="#000000"
+       stroke-width="0.707107"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       stroke-dasharray="none"
+       id="rect2"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.705511;stroke-dasharray:none" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.73685px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.537826;stroke-linecap:round;stroke-linejoin:round"
+       x="91.950066"
+       y="23.448208"
+       id="text2213"
+       transform="scale(0.78213375,1.2785537)"><tspan
+         sodipodi:role="line"
+         x="91.950066"
+         y="23.448208"
+         id="tspan2"
+         style="stroke-width:0.537826">switch00</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.76749px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.540697;stroke-linecap:round;stroke-linejoin:round"
+       x="90.795341"
+       y="60.503464"
+       id="text10-5"
+       transform="scale(0.7863085,1.2717655)"><tspan
+         sodipodi:role="line"
+         id="tspan10-3"
+         x="90.795341"
+         y="60.503464"
+         style="stroke-width:0.540697">switch03</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.76749px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.540697;stroke-linecap:round;stroke-linejoin:round"
+       x="90.979141"
+       y="48.752731"
+       id="text10"
+       transform="scale(0.7863085,1.2717655)"><tspan
+         sodipodi:role="line"
+         id="tspan10"
+         x="90.979141"
+         y="48.752731"
+         style="stroke-width:0.540697">switch02</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.76749px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.540697;stroke-linecap:round;stroke-linejoin:round"
+       x="91.155952"
+       y="36.406528"
+       id="text2217"
+       transform="scale(0.7863085,1.2717655)"><tspan
+         sodipodi:role="line"
+         id="tspan2215"
+         x="91.155952"
+         y="36.406528"
+         style="stroke-width:0.540697">switch01</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.76749px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.540697;stroke-linecap:round;stroke-linejoin:round"
+       x="142.87766"
+       y="36.888897"
+       id="text2217-2"
+       transform="scale(0.7863085,1.2717655)"><tspan
+         sodipodi:role="line"
+         id="tspan2215-7"
+         x="142.87766"
+         y="36.888897"
+         style="stroke-width:0.540697">led00</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.76749px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.540697;stroke-linecap:round;stroke-linejoin:round"
+       x="140.01848"
+       y="70.513199"
+       id="text10-5-1"
+       transform="scale(0.7863085,1.2717655)"><tspan
+         sodipodi:role="line"
+         id="tspan10-3-2"
+         x="140.01848"
+         y="70.513199"
+         style="stroke-width:0.540697">Lab01</tspan></text>
+  </g>
+</svg>

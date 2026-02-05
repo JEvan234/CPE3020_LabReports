@@ -16,12 +16,14 @@ Date: 2026 - 02 - 04 \
 
 #pagebreak()
 = Design Description
+The purpose of this design is to take in 4 switch inputs from "refs" as either a high or low call, and then return the resulting total call in the form of an led output. 
 
-
-#pagebreak()
 = Component Diagram
+#figure(
+	image("./assets/Component01.svg"),
+	caption: [Component Diagram]
+)
 
-#pagebreak()
 = Design Block Diagram
 
 #pagebreak()
