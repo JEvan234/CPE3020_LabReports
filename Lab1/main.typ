@@ -7,16 +7,16 @@
 
 = Referree Lab
 Lab 01
-#v(230pt)
+#v(200pt)
 #set text(size: 16pt)
 Designer: Jacob Evans \
 Class: CPE 3020 \
 Term: Spring 2026 \ 
 Date: 2026 - 02 - 04 \
 
-
 #pagebreak()
 = Design Description
+
 
 #pagebreak()
 = Component Diagram
