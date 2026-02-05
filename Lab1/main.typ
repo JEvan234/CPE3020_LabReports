@@ -3,7 +3,7 @@
 #set page(
 	paper: "a4"
 )
-#set text(size: 24pt, font: "Noto Sans Carian")
+#set text(size: 24pt, font: "DejaVu Sans")
 
 = Referree Lab
 Lab 01
@@ -13,7 +13,6 @@ Designer: Jacob Evans \
 Class: CPE 3020 \
 Term: Spring 2026 \ 
 Date: 2026 - 02 - 04 \
-
 #pagebreak()
 = Design Description
 The purpose of this design is to take in 4 switch inputs from "refs" as either a high or low call, and then return the resulting total call in the form of an led output. 
