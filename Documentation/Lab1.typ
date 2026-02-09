@@ -23,13 +23,21 @@ The purpose of this design is to take in 4 switch inputs from "refs" as either a
 	caption: [Component Diagram]
 )
 
-= Design Block Diagram
-
-#pagebreak()
-= Test Bench Block Diagram
-
+= Design Diagram
+#figure(
+	image("./assets/Design01.svg")
+)
 #pagebreak()
 = Design Code
 
 #pagebreak()
+= Test Bench Diagram
+
+#pagebreak()
 = Test Bench Code
+
+#pagebreak()
+= Basys3 Wrapper Block Diagram
+
+#pagebreak()
+= Basys3 Wrapper Code
