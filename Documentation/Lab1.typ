@@ -5,8 +5,8 @@
 )
 #set text(size: 24pt, font: "DejaVu Sans")
 
-= Referree Lab
-Lab 01
+= Lab01
+Referree Lab
 #v(200pt)
 #set text(size: 16pt)
 Designer: Jacob Evans \
@@ -25,7 +25,8 @@ The purpose of this design is to take in 4 switch inputs from "refs" as either a
 
 = Design Diagram
 #figure(
-	image("./assets/Design01.svg")
+	image("./assets/Design01.svg"),
+  caption: [Design Diagram]
 )
 #pagebreak()
 = Design Code
@@ -42,7 +43,7 @@ The purpose of this design is to take in 4 switch inputs from "refs" as either a
 -- Project Name: 
 -- Target Devices: Basys3 - Artix 7 FPGA Board
 -- Tool Versions: 
--- Description: 
+-- Description:
 -- 
 -- Revision:
 -- Revision 0.01 - File Created
@@ -54,30 +55,36 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Lab01 is
     port (
-    A: in std_logic;
-    B: in std_logic;
-    C: in std_logic;
-    D: in std_logic;
-    F: out std_logic
+    switch00: in std_logic;
+    switch01: in std_logic;
+    switch02: in std_logic;
+    switch03: in std_logic;
+    led00: out std_logic
   );
 end Lab01;
 
 architecture Lab01_ARCH of Lab01 is
 
 begin
-    F <= (A AND (B OR C OR D)) OR (B AND C AND D);
+    led00 <= (switch00 AND (switch01 OR switch02 OR switch03)) OR (switch01 AND switch02 AND switch03);
 
 end Lab01_ARCH;
 ```
 
 #pagebreak()
 = Test Bench Diagram
-
+#figure(
+  image("./assets/Testbench01.svg"),
+  caption: [Test Bench Block Diagram]
+)
 #pagebreak()
 = Test Bench Code
 
 #pagebreak()
 = Basys3 Wrapper Block Diagram
-
+#figure(
+  image("./assets/Wrapper.svg"),
+  caption: [Basys3 Wrapper Block Diagram]
+)
 #pagebreak()
 = Basys3 Wrapper Code

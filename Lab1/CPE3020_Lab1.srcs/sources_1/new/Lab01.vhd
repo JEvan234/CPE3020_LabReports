@@ -8,9 +8,7 @@
 -- Project Name: 
 -- Target Devices: Basys3 - Artix 7 FPGA Board
 -- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
+-- Description:
 -- 
 -- Revision:
 -- Revision 0.01 - File Created
@@ -22,17 +20,17 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Lab01 is
     port (
-    A: in std_logic;
-    B: in std_logic;
-    C: in std_logic;
-    D: in std_logic;
-    F: out std_logic
+    switch00: in std_logic;
+    switch01: in std_logic;
+    switch02: in std_logic;
+    switch03: in std_logic;
+    led00: out std_logic
   );
 end Lab01;
 
 architecture Lab01_ARCH of Lab01 is
 
 begin
-    F <= (A AND (B OR C OR D)) OR (B AND C AND D);
+    led00 <= (switch00 AND (switch01 OR switch02 OR switch03)) OR (switch01 AND switch02 AND switch03);
 
 end Lab01_ARCH;
