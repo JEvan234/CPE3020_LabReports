@@ -1,5 +1,7 @@
 *.pdf
 ./Lab1/*.pdf
+.DS_Store
+
 
 # Vivado Specific
 *.cache/
