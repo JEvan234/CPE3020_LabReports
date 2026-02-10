@@ -3,7 +3,6 @@
 #set page(
 	paper: "a4"
 )
-#set text(size: 24pt, font: "DejaVu Sans")
 
 = Lab01
 Referree Lab
