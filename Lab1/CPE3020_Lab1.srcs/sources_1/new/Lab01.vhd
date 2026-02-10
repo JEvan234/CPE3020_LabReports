@@ -20,12 +20,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Lab01 is
     port (
-    switch00: in std_logic;
-    switch01: in std_logic;
-    switch02: in std_logic;
-    switch03: in std_logic;
-    led00: out std_logic
-  );
+        switch00: in std_logic;
+        switch01: in std_logic;
+        switch02: in std_logic;
+        switch03: in std_logic;
+        led00: out std_logic
+    );
 end Lab01;
 
 architecture Lab01_ARCH of Lab01 is
