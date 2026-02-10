@@ -21,9 +21,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="true"
-     inkscape:zoom="2.912805"
-     inkscape:cx="140.58614"
-     inkscape:cy="118.61419"
+     inkscape:zoom="5.82561"
+     inkscape:cx="75.786055"
+     inkscape:cy="104.10927"
      inkscape:window-width="2560"
      inkscape:window-height="1369"
      inkscape:window-x="1072"
@@ -61,16 +61,16 @@
        style="stroke-width:0.96703">LED00_DRIVER</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:13.216px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.239;stroke-linecap:round;stroke-linejoin:round"
-     x="12.586901"
-     y="87.683502"
+     style="font-size:10.4563px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.980278;stroke-linecap:round;stroke-linejoin:round"
+     x="18.080261"
+     y="86.147682"
      id="text2213"
-     transform="scale(0.98674243,1.0134357)"><tspan
+     transform="scale(0.96724745,1.0338616)"><tspan
        sodipodi:role="line"
        id="tspan2211"
-       x="12.586901"
-       y="87.683502"
-       style="stroke-width:1.239">switch00</tspan></text>
+       x="18.080261"
+       y="86.147682"
+       style="stroke-width:0.980278">switch00</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:13.216px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.239;stroke-linecap:round;stroke-linejoin:round"
@@ -152,4 +152,8 @@
        x="11.845694"
        y="160.86842"
        style="stroke-width:1.239">switch03</tspan></text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1.34801;stroke-opacity:1"
+     d="m 11.805899,77.107348 v 15.894217 l 46.56709,-0.529808 8.667061,-9.006723 -8.226362,-6.357686 z"
+     id="path1" />
 </svg>
