@@ -3,7 +3,7 @@
 #set page(
 	paper: "a4"
 )
-
+#set text(size: 32pt)
 = Lab01
 Referree Lab
 #v(200pt)
@@ -76,14 +76,210 @@ end Lab01_ARCH;
   image("./assets/Testbench01.svg"),
   caption: [Test Bench Block Diagram]
 )
-#pagebreak()
-= Test Bench Code
 
+= Test Bench Code
+```vhdl
+----------------------------------------------------------------------------------
+-- Company: Kennesaw State University
+-- Engineer: Jacob Evans
+-- 
+-- Create Date: 02/09/2026 02:52:51 PM
+-- Design Name: Referree Lab
+-- Module Name: Lab01_TB - Lab01_TB_ARCH
+-- Project Name: 
+-- Target Devices: Basys3 - Artix 7 FPGA Board
+-- Tool Versions: 
+-- Description:
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Lab01_TB is
+--  Port ( );
+end Lab01_TB;
+
+architecture Lab01_TB_ARCH of Lab01_TB is
+    signal switch00: std_logic := '0';
+    signal switch01: std_logic := '0';
+    signal switch02: std_logic := '0';
+    signal switch03: std_logic := '0';
+    signal led00: std_logic;
+    
+    component Lab01 is
+        Port (
+            switch00: in std_logic;
+            switch01: in std_logic;
+            switch02: in std_logic;
+            switch03: in std_logic;
+            led00: out std_logic
+        );
+    end component;
+    
+begin
+    UUT: Lab01 port map(
+        switch00 => switch00,
+        switch01 => switch01,
+        switch02 => switch02,
+        switch03 => switch03,
+        led00 => led00
+    );
+    process
+    begin
+        switch00 <= '0';
+        switch01 <= '0';
+        switch02 <= '0';
+        switch03 <= '0';
+        wait for 10 ns;
+        switch00 <= '0';
+        switch01 <= '0';
+        switch02 <= '0';
+        switch03 <= '1';
+        wait for 10 ns;
+        switch00 <= '0';
+        switch01 <= '0';
+        switch02 <= '1';
+        switch03 <= '0';
+        wait for 10 ns;
+        switch00 <= '0';
+        switch01 <= '0';
+        switch02 <= '1';
+        switch03 <= '1';
+        wait for 10 ns;
+        switch00 <= '0';
+        switch01 <= '1';
+        switch02 <= '0';
+        switch03 <= '0';
+        wait for 10 ns;
+        switch00 <= '0';
+        switch01 <= '1';
+        switch02 <= '0';
+        switch03 <= '1';
+        wait for 10 ns;
+        switch00 <= '0';
+        switch01 <= '1';
+        switch02 <= '1';
+        switch03 <= '0';
+        wait for 10 ns;
+        switch00 <= '0';
+        switch01 <= '1';
+        switch02 <= '1';
+        switch03 <= '1';
+        wait for 10 ns;
+        switch00 <= '1';
+        switch01 <= '0';
+        switch02 <= '0';
+        switch03 <= '0';
+        wait for 10 ns;
+        switch00 <= '1';
+        switch01 <= '0';
+        switch02 <= '0';
+        switch03 <= '1';
+        wait for 10 ns;
+        switch00 <= '1';
+        switch01 <= '0';
+        switch02 <= '1';
+        switch03 <= '0';
+        wait for 10 ns;
+        switch00 <= '1';
+        switch01 <= '0';
+        switch02 <= '1';
+        switch03 <= '1';
+        wait for 10 ns;
+        switch00 <= '1';
+        switch01 <= '1';
+        switch02 <= '0';
+        switch03 <= '0';
+        wait for 10 ns;
+        switch00 <= '1';
+        switch01 <= '1';
+        switch02 <= '0';
+        switch03 <= '1';
+        wait for 10 ns;
+        switch00 <= '1';
+        switch01 <= '1';
+        switch02 <= '1';
+        switch03 <= '0';
+        wait for 10 ns;
+        switch00 <= '1';
+        switch01 <= '1';
+        switch02 <= '1';
+        switch03 <= '1';
+        wait for 10 ns;
+        wait;
+    end process;
+    
+
+end Lab01_TB_ARCH;
+```
 #pagebreak()
 = Basys3 Wrapper Block Diagram
 #figure(
   image("./assets/Wrapper.svg"),
   caption: [Basys3 Wrapper Block Diagram]
 )
-#pagebreak()
+
 = Basys3 Wrapper Code
+```vhdl
+----------------------------------------------------------------------------------
+-- Company: Kennesaw State University
+-- Engineer: Jacob Evans
+-- 
+-- Create Date: 02/09/2026 02:52:51 PM
+-- Design Name: Referree Lab
+-- Module Name: Lab01_Basys3 - Lab01_Basys3_ARCH
+-- Project Name: 
+-- Target Devices: Basys3 - Artix 7 FPGA Board
+-- Tool Versions: 
+-- Description:
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Lab01_Basys3 is
+  Port (
+  sw : in std_logic_vector (3 downto 0);
+  led : out std_logic_vector (0 downto 0));
+end Lab01_Basys3;
+
+architecture Lab01_Basys3_ARCH of Lab01_Basys3 is
+
+    signal switch00: std_logic := '0';
+    signal switch01: std_logic := '0';
+    signal switch02: std_logic := '0';
+    signal switch03: std_logic := '0';
+    signal led00: std_logic;
+    
+    component Lab01 is
+        Port (
+            switch00: in std_logic;
+            switch01: in std_logic;
+            switch02: in std_logic;
+            switch03: in std_logic;
+            led00: out std_logic
+        );
+    end component;
+begin
+    UUT: Lab01 port map(
+    switch00 => sw(0),
+    switch01 => sw(1),
+    switch02 => sw(2),
+    switch03 => sw(3),
+    led00 => led(0)
+    );
+
+end Lab01_Basys3_ARCH;
+```

@@ -6,7 +6,7 @@
    version="1.1"
    id="svg52"
    sodipodi:docname="Design01.svg"
-   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -21,13 +21,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="true"
-     inkscape:zoom="5.82561"
-     inkscape:cx="75.786055"
-     inkscape:cy="104.10927"
-     inkscape:window-width="2560"
-     inkscape:window-height="1369"
-     inkscape:window-x="1072"
-     inkscape:window-y="197"
+     inkscape:zoom="3.0064324"
+     inkscape:cx="172.62986"
+     inkscape:cy="106.60476"
+     inkscape:window-width="1920"
+     inkscape:window-height="1128"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg52">
     <inkscape:grid
@@ -47,6 +47,48 @@
   </sodipodi:namedview>
   <defs
      id="defs2" />
+  <path
+     style="fill:#ffffff;stroke:#000000;stroke-width:1.173"
+     d="M 11,75 V 95 H 56 L 66,85 56,75 Z"
+     id="path2" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.173;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     d="M 273.22592,85 H 66"
+     id="path8"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.173;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     d="M 154.61627,109.61627 H 65.946205"
+     id="path9"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:#ffffff;stroke:#000000;stroke-width:1.173"
+     d="m 10.946205,99.61627 v 20 h 45 l 10,-10 -10,-10 z"
+     id="path2-6" />
+  <text
+     xml:space="preserve"
+     style="font-size:10.4563px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.980278;stroke-linecap:round;stroke-linejoin:round"
+     x="15.216904"
+     y="86.950157"
+     id="text2213"
+     transform="scale(0.96724745,1.0338616)"><tspan
+       sodipodi:role="line"
+       id="tspan2211"
+       x="15.216904"
+       y="86.950157"
+       style="stroke-width:0.980278">switch00</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:11.0347px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.0345;stroke-linecap:round;stroke-linejoin:round"
+     x="17.489655"
+     y="98.62973"
+     id="text2217"
+     transform="scale(0.85764986,1.165977)"><tspan
+       sodipodi:role="line"
+       id="tspan2215"
+       x="17.489655"
+       y="98.62973"
+       style="stroke-width:1.0345">switch01</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:10.315px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96703;stroke-linecap:round;stroke-linejoin:round"
@@ -59,74 +101,36 @@
        x="164.5743"
        y="45.564983"
        style="stroke-width:0.96703">LED00_DRIVER</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:10.4563px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.980278;stroke-linecap:round;stroke-linejoin:round"
-     x="18.080261"
-     y="86.147682"
-     id="text2213"
-     transform="scale(0.96724745,1.0338616)"><tspan
-       sodipodi:role="line"
-       id="tspan2211"
-       x="18.080261"
-       y="86.147682"
-       style="stroke-width:0.980278">switch00</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:13.216px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.239;stroke-linecap:round;stroke-linejoin:round"
-     x="13.72413"
-     y="112.80221"
-     id="text2217"
-     transform="scale(0.98674243,1.0134357)"><tspan
-       sodipodi:role="line"
-       id="tspan2215"
-       x="13.72413"
-       y="112.80221"
-       style="stroke-width:1.239">switch01</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:11.1679px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.04699;stroke-linecap:round;stroke-linejoin:round"
-     x="332.03278"
-     y="72.491249"
-     id="text2221"
-     transform="scale(0.83382615,1.1992908)"><tspan
-       sodipodi:role="line"
-       id="tspan2219"
-       x="332.03278"
-       y="72.491249"
-       style="stroke-width:1.04699">led00</tspan></text>
   <path
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.173;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     d="M 273.78341,83.875547 H 66.557491"
-     id="path8"
+     d="M 154.25656,135.5865 H 65.5865"
+     id="path9-9"
      sodipodi:nodetypes="cc" />
   <path
-     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.26756;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     d="M 147.22108,159.19975 H 66.571575"
-     id="path10-6"
-     sodipodi:nodetypes="cc" />
-  <path
-     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.173;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     d="M 154.61627,109.61627 H 65.946205"
-     id="path9"
-     sodipodi:nodetypes="cc" />
-  <path
-     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.239;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     d="M 143.00182,134.72916 H 65.946205"
-     id="path10"
-     sodipodi:nodetypes="cc" />
+     style="fill:#ffffff;stroke:#000000;stroke-width:1.173"
+     d="m 10.5865,125.5865 v 20 h 45 l 10,-10 -10,-10 z"
+     id="path2-6-1" />
   <text
      xml:space="preserve"
-     style="font-size:13.216px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.239;stroke-linecap:round;stroke-linejoin:round"
-     x="11.22521"
-     y="136.42067"
-     id="text10"
-     transform="scale(0.98674243,1.0134357)"><tspan
+     style="font-size:11.0347px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.0345;stroke-linecap:round;stroke-linejoin:round"
+     x="17.070248"
+     y="120.9031"
+     id="text2217-2"
+     transform="scale(0.85764986,1.165977)"><tspan
        sodipodi:role="line"
-       id="tspan10"
-       x="11.22521"
-       y="136.42067"
-       style="stroke-width:1.239">switch02</tspan></text>
+       id="tspan2215-7"
+       x="17.070248"
+       y="120.9031"
+       style="stroke-width:1.0345">switch02</tspan></text>
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.173;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     d="M 154.33503,160 H 65.664968"
+     id="path9-93"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:#ffffff;stroke:#000000;stroke-width:1.173"
+     d="m 10.664968,150 v 20 h 45 l 10,-10 -10,-10 z"
+     id="path2-6-6" />
   <rect
      x="128.51036"
      y="59.295631"
@@ -142,18 +146,30 @@
      style="fill:#ffffff;fill-opacity:1;stroke-width:1.05152;stroke-dasharray:none" />
   <text
      xml:space="preserve"
-     style="font-size:13.216px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.239;stroke-linecap:round;stroke-linejoin:round"
-     x="11.845694"
-     y="160.86842"
-     id="text10-9"
-     transform="scale(0.98674243,1.0134357)"><tspan
+     style="font-size:11.0347px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.0345;stroke-linecap:round;stroke-linejoin:round"
+     x="17.161737"
+     y="141.84134"
+     id="text2217-0"
+     transform="scale(0.85764986,1.165977)"><tspan
        sodipodi:role="line"
-       id="tspan10-4"
-       x="11.845694"
-       y="160.86842"
-       style="stroke-width:1.239">switch03</tspan></text>
+       id="tspan2215-6"
+       x="17.161737"
+       y="141.84134"
+       style="stroke-width:1.0345">switch03</tspan></text>
   <path
-     style="fill:none;stroke:#000000;stroke-width:1.34801;stroke-opacity:1"
-     d="m 11.805899,77.107348 v 15.894217 l 46.56709,-0.529808 8.667061,-9.006723 -8.226362,-6.357686 z"
-     id="path1" />
+     style="fill:#ffffff;stroke:#000000;stroke-width:1.173"
+     d="m 270,75 v 20 h 45 L 325,85 315,75 Z"
+     id="path2-61" />
+  <text
+     xml:space="preserve"
+     style="font-size:11.1679px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.04699;stroke-linecap:round;stroke-linejoin:round"
+     x="329.05243"
+     y="74.935287"
+     id="text2221"
+     transform="scale(0.83382614,1.1992908)"><tspan
+       sodipodi:role="line"
+       id="tspan2219"
+       x="329.05243"
+       y="74.935287"
+       style="stroke-width:1.04699">led00</tspan></text>
 </svg>
