@@ -1,2 +1,35 @@
 *.pdf
 ./Lab1/*.pdf
+
+# Vivado Specific
+*.cache/
+*.runs/
+*.sim/
+*.hw/
+*.ip_user_files/
+*.gen/
+*.jou
+*.log
+*.str
+*.data
+*.dcp
+*.xpr.zip
+.Xil/
+
+# Common generated files
+*.bit
+*.bin
+*.elf
+*.so
+*.o
+*.a
+*.elf
+
+# Block Design related (if regenerating from TCL)
+# *.bd
+
+# Vitis/SDK generated
+.metadata/
+*.sdk/
+*.xsa
+*.bit
