@@ -18,13 +18,13 @@ The purpose of this design is to take in 4 switch inputs from "refs" as either a
 
 = Component Diagram
 #figure(
-	image("./assets/Component01.svg"),
+	image("./assets/Lab01/Component01.svg"),
 	caption: [Component Diagram]
 )
 
 = Design Diagram
 #figure(
-	image("./assets/Design01.svg"),
+	image("./assets/Lab01/Design01.svg"),
   caption: [Design Diagram]
 )
 #pagebreak()
@@ -73,7 +73,7 @@ end Lab01_ARCH;
 #pagebreak()
 = Test Bench Diagram
 #figure(
-  image("./assets/Testbench01.svg"),
+  image("./assets/Lab01/Testbench01.svg"),
   caption: [Test Bench Block Diagram]
 )
 
@@ -221,7 +221,7 @@ end Lab01_TB_ARCH;
 #pagebreak()
 = Basys3 Wrapper Block Diagram
 #figure(
-  image("./assets/Wrapper.svg"),
+  image("./assets/Lab01/Wrapper01.svg"),
   caption: [Basys3 Wrapper Block Diagram]
 )
 
