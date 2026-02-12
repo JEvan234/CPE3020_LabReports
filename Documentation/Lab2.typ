@@ -2,6 +2,7 @@
 
 #set page(paper: "a4")
 #set text(size:32pt)
+#set raw(syntaxes: "VHDL.sublime-syntax")
 
 = Lab02
 Hardware Interfacing Lab
