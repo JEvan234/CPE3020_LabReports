@@ -17,6 +17,7 @@ The purpose of this lab is to interface the hardware with our design in such a w
 
 = Design Diagram
 #figure(
-  image("./assets/Lab02/Design02.svg"),
+  image("./assets/Lab02/Design02.svg",
+  width: 110%),
   caption: [Design Block Diagram]
 )
