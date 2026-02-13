@@ -22,3 +22,4 @@ The purpose of this lab is to interface the hardware with our design in such a w
   width: 110%),
   caption: [Design Block Diagram]
 )
+= Design Code
