@@ -38,5 +38,25 @@ begin
                     "0000000" when others;
 
 -- Implement Left and Right Function
+    RIGHT_FUNCTION: process(rightButton, bitCount)
+        begin 
+            if rightButton = '0' then
+                case bitCount is
+                    when "000" =>
+                        rightLeds <= "11111111";
+                end case;
+            end if;
+        end process;
+        
+    LEFT_FUNCTION: process(leftButton, bitCount)
+        begin 
+            if leftButton = '0' then
+                case bitCount is
+                    when "000" =>
+                        rightLeds <= "11111111";
+                end case;
+            end if;
+        end process;
+            
 
 end Lab02_ARCH;
