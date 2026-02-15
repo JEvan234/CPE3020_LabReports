@@ -68,9 +68,25 @@ begin
         begin 
             if leftButton = '0' then
                 case bitCount is
-                    when "000" =>
-                        rightLeds <= "11111111";
+                    when "001" => --1
+                        leftLeds <= "01111111";
+                    when "010" => --2
+                        leftLeds <= "00111111";
+                    when "011" => --3
+                        leftLeds <= "00011111";
+                    when "100" => --4
+                        leftLeds <= "00001111";
+                    when "101" => --5
+                        leftLeds <= "00000111";
+                    when "110" => --6
+                        leftLeds <= "00000011";
+                    when "111" => --7
+                        leftLeds <= "00000001";
+                    when others => --0 and others
+                        leftLeds <= "11111111";
                 end case;
+            else
+                leftLeds <= "11111111";
             end if;
         end process;
             
