@@ -42,9 +42,25 @@ begin
         begin 
             if rightButton = '0' then
                 case bitCount is
-                    when "000" =>
+                    when "001" => --1
+                        rightLeds <= "11111110";
+                    when "010" => --2
+                        rightLeds <= "11111100";
+                    when "011" => --3
+                        rightLeds <= "11111000";
+                    when "100" => --4
+                        rightLeds <= "11110000";
+                    when "101" => --5
+                        rightLeds <= "11100000";
+                    when "110" => --6
+                        rightLeds <= "11000000";
+                    when "111" => --7
+                        rightLeds <= "10000000";
+                    when others => --0 and others
                         rightLeds <= "11111111";
                 end case;
+            else 
+                rightLeds <= "11111111";
             end if;
         end process;
         
