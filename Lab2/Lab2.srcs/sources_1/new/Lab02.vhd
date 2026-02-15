@@ -6,7 +6,7 @@
 -- Module Name: Lab02 - Lab02_ARCH
 -- Project Name: Hardware Integration Lab
 -- Target Devices: Basys3 - Artix 7
--- Description: 
+-- Description: Split into 3 sections, this component will display a number entered from the right 3 switches, and light up that number of LEDS cooresponding to a left/right button input.
 -- 
 ----------------------------------------------------------------------------------
 
