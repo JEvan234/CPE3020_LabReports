@@ -27,15 +27,15 @@ architecture Lab02_ARCH of Lab02 is
 begin
     
     SEG7_DECODER: with bitCount select
-        whichNum <= "1000000" when "000", --1
-                    "1111001" when "001", --2
-                    "0000000" when "010", --Fill in rest
-                    "0000000" when "011",
-                    "0000000" when "100",
-                    "0000000" when "101",
-                    "0000000" when "110",
-                    "0000000" when "111",
-                    "0000000" when others;
+        whichNum <= "0000001" when "000", --0
+                    "1001111" when "001", --1
+                    "0010010" when "010", --2
+                    "0000110" when "011", --3
+                    "1001100" when "100", --4
+                    "0100100" when "101", --5
+                    "0100000" when "110", --6
+                    "0001111" when "111", --7
+                    "0000001" when others; -- others, same as 0
 
 -- Implement Left and Right Function
     RIGHT_FUNCTION: process(rightButton, bitCount)
