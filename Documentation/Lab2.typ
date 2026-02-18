@@ -129,3 +129,9 @@ end Lab02_ARCH;
     width: 90%),
     caption: [Test Bench Block Diagram]
 )
+
+= Test Bench Code
+```vhdl
+```
+
+= Test Bench Results
