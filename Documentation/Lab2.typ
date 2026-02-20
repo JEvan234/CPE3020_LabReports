@@ -34,7 +34,7 @@ The purpose of this lab is to interface the hardware with our design in such a w
 -- Module Name: Lab02 - Lab02_ARCH
 -- Project Name: Hardware Integration Lab
 -- Target Devices: Basys3 - Artix 7
--- Description: 
+-- Description: Split into 3 sections, this component will display a number entered from the right 3 switches, and light up that number of LEDS cooresponding to a left/right button input.
 -- 
 ----------------------------------------------------------------------------------
 
@@ -55,24 +55,40 @@ architecture Lab02_ARCH of Lab02 is
 begin
     
     SEG7_DECODER: with bitCount select
-        whichNum <= "1000000" when "000", --1
-                    "1111001" when "001", --2
-                    "0000000" when "010", --Fill in rest
-                    "0000000" when "011",
-                    "0000000" when "100",
-                    "0000000" when "101",
-                    "0000000" when "110",
-                    "0000000" when "111",
-                    "0000000" when others;
+        whichNum <= "0000001" when "000", --0
+                    "1001111" when "001", --1
+                    "0010010" when "010", --2
+                    "0000110" when "011", --3
+                    "1001100" when "100", --4
+                    "0100100" when "101", --5
+                    "0100000" when "110", --6
+                    "0001111" when "111", --7
+                    "0000001" when others; -- others, same as 0
 
 -- Implement Left and Right Function
     RIGHT_FUNCTION: process(rightButton, bitCount)
         begin 
             if rightButton = '0' then
                 case bitCount is
-                    when "000" =>
+                    when "001" => --1
+                        rightLeds <= "11111110";
+                    when "010" => --2
+                        rightLeds <= "11111100";
+                    when "011" => --3
+                        rightLeds <= "11111000";
+                    when "100" => --4
+                        rightLeds <= "11110000";
+                    when "101" => --5
+                        rightLeds <= "11100000";
+                    when "110" => --6
+                        rightLeds <= "11000000";
+                    when "111" => --7
+                        rightLeds <= "10000000";
+                    when others => --0 and others
                         rightLeds <= "11111111";
                 end case;
+            else 
+                rightLeds <= "11111111";
             end if;
         end process;
         
@@ -80,12 +96,184 @@ begin
         begin 
             if leftButton = '0' then
                 case bitCount is
-                    when "000" =>
-                        rightLeds <= "11111111";
+                    when "001" => --1
+                        leftLeds <= "01111111";
+                    when "010" => --2
+                        leftLeds <= "00111111";
+                    when "011" => --3
+                        leftLeds <= "00011111";
+                    when "100" => --4
+                        leftLeds <= "00001111";
+                    when "101" => --5
+                        leftLeds <= "00000111";
+                    when "110" => --6
+                        leftLeds <= "00000011";
+                    when "111" => --7
+                        leftLeds <= "00000001";
+                    when others => --0 and others
+                        leftLeds <= "11111111";
                 end case;
+            else
+                leftLeds <= "11111111";
             end if;
         end process;
             
 
 end Lab02_ARCH;
+```
+
+#pagebreak()
+= Test Bench Diagram
+#figure(
+    image("./assets/Lab02/Testbench02.svg",
+    width: 90%),
+    caption: [Test Bench Block Diagram]
+)
+
+= Test Bench Code
+```vhdl
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date: 02/15/2026 03:14:40 PM
+-- Design Name: 
+-- Module Name: Lab02_TB - Lab02_TB_ARCH
+-- Project Name: 
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Lab02_TB is
+--  Port ( );
+end Lab02_TB;
+
+architecture Lab02_TB_ARCH of Lab02_TB is
+--Signals
+    signal leftButton: std_logic := '0';
+    signal rightButton: std_logic := '0';
+    signal bitCount: std_logic_vector(2 downto 0) := "000";
+    signal leftLeds: std_logic_vector(15 downto 8) := "00000000";
+    signal rightLeds: std_logic_vector(7 downto 0) := "00000000";
+    signal whichNum: std_logic_vector(6 downto 0) := "0000000";
+    
+    --Define Component
+    component Lab02
+        Port (
+        leftButton: in std_logic;
+        rightButton: in std_logic;
+        bitCount: in std_logic_vector(2 downto 0);
+        leftLeds: out std_logic_vector(15 downto 8);
+        rightLeds: out std_logic_vector(7 downto 0);
+        whichNum: out std_logic_vector(6 downto 0));
+    end component;
+    
+begin
+    UUT: Lab02 port map(
+    leftButton => leftButton,
+    rightButton => rightButton,
+    bitCount => bitCount,
+    rightLeds => rightLeds,
+    leftLeds => leftLeds,
+    whichNum => whichNum);
+    
+    -- Update the process more
+    
+    process
+    begin
+        bitCount <= "000";
+        leftButton <= '0';
+        wait for 10ns;
+        wait;
+    end process;
+
+end Lab02_TB_ARCH;
+```
+
+= Test Bench Results
+
+#pagebreak()
+
+= Wrapper Design Block
+
+= Wrapper Design Code
+```vhdl
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date: 02/20/2026 05:43:44 PM
+-- Design Name: 
+-- Module Name: Lab02_Basys3 - Lab02_Basys3_ARCH
+-- Project Name: 
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Lab02_Basys3 is
+  Port (
+    sw : in std_logic_vector (2 downto 0);
+    led : out std_logic_vector (15 downto 0);
+    btnL: in std_logic;
+    btnR: in std_logic;
+    seg: out std_logic_vector(6 downto 0)
+  );
+  
+  
+end Lab02_Basys3;
+
+architecture Lab02_Basys3_ARCH of Lab02_Basys3 is
+    signal leftButton: std_logic := '0';
+    signal rightButton: std_logic := '0';
+    signal bitCount: std_logic_vector(2 downto 0) := "000";
+    signal leftLeds: std_logic_vector(15 downto 8) := "00000000";
+    signal rightLeds: std_logic_vector(7 downto 0) := "00000000";
+    signal whichNum: std_logic_vector(6 downto 0) := "0000000";
+    
+    --Define Component
+    component Lab02
+        Port (
+        leftButton: in std_logic;
+        rightButton: in std_logic;
+        bitCount: in std_logic_vector(2 downto 0);
+        leftLeds: out std_logic_vector(15 downto 8);
+        rightLeds: out std_logic_vector(7 downto 0);
+        whichNum: out std_logic_vector(6 downto 0));
+    end component;
+
+begin
+    UUT: Lab02 port map(
+    leftButton => btnL,
+    rightButton => btnR,
+    bitCount => sw,
+    rightLeds => led(7 downto 0),
+    leftLeds => led(15 downto 8),
+    whichNum => seg
+    );
+
+end Lab02_Basys3_ARCH;
 ```

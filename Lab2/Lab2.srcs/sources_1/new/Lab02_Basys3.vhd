@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 02/15/2026 03:14:40 PM
+-- Create Date: 02/20/2026 05:43:44 PM
 -- Design Name: 
--- Module Name: Lab02_TB - Lab02_TB_ARCH
+-- Module Name: Lab02_Basys3 - Lab02_Basys3_ARCH
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -22,12 +22,19 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity Lab02_TB is
---  Port ( );
-end Lab02_TB;
+entity Lab02_Basys3 is
+  Port (
+    sw : in std_logic_vector (2 downto 0);
+    led : out std_logic_vector (15 downto 0);
+    btnL: in std_logic;
+    btnR: in std_logic;
+    seg: out std_logic_vector(6 downto 0)
+  );
+  
+  
+end Lab02_Basys3;
 
-architecture Lab02_TB_ARCH of Lab02_TB is
---Signals
+architecture Lab02_Basys3_ARCH of Lab02_Basys3 is
     signal leftButton: std_logic := '0';
     signal rightButton: std_logic := '0';
     signal bitCount: std_logic_vector(2 downto 0) := "000";
@@ -45,24 +52,15 @@ architecture Lab02_TB_ARCH of Lab02_TB is
         rightLeds: out std_logic_vector(7 downto 0);
         whichNum: out std_logic_vector(6 downto 0));
     end component;
-    
+
 begin
     UUT: Lab02 port map(
-    leftButton => leftButton,
-    rightButton => rightButton,
-    bitCount => bitCount,
-    rightLeds => rightLeds,
-    leftLeds => leftLeds,
-    whichNum => whichNum);
-    
-    -- Update the process more
-    
-    process
-    begin
-        bitCount <= "000";
-        leftButton <= '0';
-        wait for 10ns;
-        wait;
-    end process;
+    leftButton => btnL,
+    rightButton => btnR,
+    bitCount => sw,
+    rightLeds => led(7 downto 0),
+    leftLeds => led(15 downto 8),
+    whichNum => seg
+    );
 
-end Lab02_TB_ARCH;
+end Lab02_Basys3_ARCH;
