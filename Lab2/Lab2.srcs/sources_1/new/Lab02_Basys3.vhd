@@ -8,10 +8,8 @@
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Description: Wrapper File for the Lab2 Component. Accounts for all 3 switches, all 16 leds, and the most-right 7-Seg Display
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
@@ -28,19 +26,14 @@ entity Lab02_Basys3 is
     led : out std_logic_vector (15 downto 0);
     btnL: in std_logic;
     btnR: in std_logic;
-    seg: out std_logic_vector(6 downto 0)
+    seg: out std_logic_vector(6 downto 0);
+    an: out std_logic_vector(3 downto 0)
   );
   
   
 end Lab02_Basys3;
 
 architecture Lab02_Basys3_ARCH of Lab02_Basys3 is
-    signal leftButton: std_logic := '0';
-    signal rightButton: std_logic := '0';
-    signal bitCount: std_logic_vector(2 downto 0) := "000";
-    signal leftLeds: std_logic_vector(15 downto 8) := "00000000";
-    signal rightLeds: std_logic_vector(7 downto 0) := "00000000";
-    signal whichNum: std_logic_vector(6 downto 0) := "0000000";
     
     --Define Component
     component Lab02
@@ -48,19 +41,26 @@ architecture Lab02_Basys3_ARCH of Lab02_Basys3 is
         leftButton: in std_logic;
         rightButton: in std_logic;
         bitCount: in std_logic_vector(2 downto 0);
-        leftLeds: out std_logic_vector(15 downto 8);
-        rightLeds: out std_logic_vector(7 downto 0);
-        whichNum: out std_logic_vector(6 downto 0));
+        leftLeds: out std_logic_vector(15 downto 9);
+        rightLeds: out std_logic_vector(6 downto 0);
+        whichNum: out std_logic_vector(6 downto 0);
+        an: out std_logic_vector(3 downto 0));
     end component;
 
 begin
+    -- Drive the unused LEDs to 0
+    led(7) <= '0';
+    led(8) <= '0';
+    
     UUT: Lab02 port map(
     leftButton => btnL,
     rightButton => btnR,
     bitCount => sw,
-    rightLeds => led(7 downto 0),
-    leftLeds => led(15 downto 8),
-    whichNum => seg
+    rightLeds => led(6 downto 0),
+    leftLeds => led(15 downto 9),
+    whichNum => seg,
+    an => an
+    
     );
 
 end Lab02_Basys3_ARCH;

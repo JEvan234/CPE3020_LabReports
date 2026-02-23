@@ -17,25 +17,28 @@ entity Lab02 is
     leftButton: in std_logic;
     rightButton: in std_logic;
     bitCount: in std_logic_vector(2 downto 0);
-    leftLeds: out std_logic_vector(15 downto 8);
-    rightLeds: out std_logic_vector(7 downto 0);
-    whichNum: out std_logic_vector(6 downto 0));
+    leftLeds: out std_logic_vector(15 downto 9);
+    rightLeds: out std_logic_vector(6 downto 0);
+    whichNum: out std_logic_vector(6 downto 0);
+    an: out std_logic_vector(3 downto 0));
 end Lab02;
 
 architecture Lab02_ARCH of Lab02 is
 
 begin
+    --define only right Seg7
+    an <= "1110";
     
     SEG7_DECODER: with bitCount select
-        whichNum <= "0000001" when "000", --0
-                    "1001111" when "001", --1
-                    "0010010" when "010", --2
-                    "0000110" when "011", --3
-                    "1001100" when "100", --4
-                    "0100100" when "101", --5
-                    "0100000" when "110", --6
-                    "0001111" when "111", --7
-                    "0000001" when others; -- others, same as 0
+        whichNum <= "1000000" when "000", --0
+                    "1111001" when "001", --1
+                    "0100100" when "010", --2
+                    "0110000" when "011", --3
+                    "0011001" when "100", --4
+                    "0010010" when "101", --5
+                    "0000010" when "110", --6
+                    "1111000" when "111", --7
+                    "1000000" when others; -- others, same as 0
 
 -- Implement Left and Right Function
     RIGHT_FUNCTION: process(rightButton, bitCount)
@@ -43,24 +46,24 @@ begin
             if rightButton = '1' then
                 case bitCount is
                     when "001" => --1
-                        rightLeds <= "00000001";
+                        rightLeds <= "0000001";
                     when "010" => --2
-                        rightLeds <= "00000011";
+                        rightLeds <= "0000011";
                     when "011" => --3
-                        rightLeds <= "00000111";
+                        rightLeds <= "0000111";
                     when "100" => --4
-                        rightLeds <= "00001111";
+                        rightLeds <= "0001111";
                     when "101" => --5
-                        rightLeds <= "00011111";
+                        rightLeds <= "0011111";
                     when "110" => --6
-                        rightLeds <= "00111111";
+                        rightLeds <= "0111111";
                     when "111" => --7
-                        rightLeds <= "01111111";
+                        rightLeds <= "1111111";
                     when others => --0 and others
-                        rightLeds <= "00000000";
+                        rightLeds <= "0000000";
                 end case;
             else 
-                rightLeds <= "00000000";
+                rightLeds <= "0000000";
             end if;
         end process;
         
@@ -69,24 +72,24 @@ begin
             if leftButton = '1' then
                 case bitCount is
                     when "001" => --1
-                        leftLeds <= "10000000";
+                        leftLeds <= "1000000";
                     when "010" => --2
-                        leftLeds <= "11000000";
+                        leftLeds <= "1100000";
                     when "011" => --3
-                        leftLeds <= "11100000";
+                        leftLeds <= "1110000";
                     when "100" => --4
-                        leftLeds <= "11110000";
+                        leftLeds <= "1111000";
                     when "101" => --5
-                        leftLeds <= "11111000";
+                        leftLeds <= "1111100";
                     when "110" => --6
-                        leftLeds <= "11111100";
+                        leftLeds <= "1111110";
                     when "111" => --7
-                        leftLeds <= "11111110";
+                        leftLeds <= "1111111";
                     when others => --0 and others
-                        leftLeds <= "00000000";
+                        leftLeds <= "0000000";
                 end case;
             else
-                leftLeds <= "00000000";
+                leftLeds <= "0000000";
             end if;
         end process;
             
