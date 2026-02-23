@@ -1,4 +1,4 @@
-// Lab Reprt 2: Jacob Evans
+// Lab Report 2: Jacob Evans
 
 #set page(paper: "a4")
 #set text(size:32pt)
