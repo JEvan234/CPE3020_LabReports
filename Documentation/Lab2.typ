@@ -133,19 +133,15 @@ end Lab02_ARCH;
 = Test Bench Code
 ```vhdl
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 02/15/2026 03:14:40 PM
--- Design Name: 
--- Module Name: Lab02_TB - Lab02_TB_ARCH
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Company: Kennesaw State University
+-- Engineer: Jacob Evans
+-- Create Date: 02/11/2026 02:06:30 PM
+-- Design Name: Lab02_TB
+-- Module Name: Lab02 - Lab02_TB_ARCH
+-- Project Name: Hardware Integration Lab
+-- Target Devices: Basys3 - Artix 7
+-- Description: Test bench for Lab2 Component, Shows all Test conditions. First with no buttons, then Left button, then Right button.
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
@@ -165,8 +161,8 @@ architecture Lab02_TB_ARCH of Lab02_TB is
     signal leftButton: std_logic := '0';
     signal rightButton: std_logic := '0';
     signal bitCount: std_logic_vector(2 downto 0) := "000";
-    signal leftLeds: std_logic_vector(15 downto 8) := "00000000";
-    signal rightLeds: std_logic_vector(7 downto 0) := "00000000";
+    signal leftLeds: std_logic_vector(15 downto 9) := "0000000";
+    signal rightLeds: std_logic_vector(6 downto 0) := "0000000";
     signal whichNum: std_logic_vector(6 downto 0) := "0000000";
     
     --Define Component
@@ -175,8 +171,8 @@ architecture Lab02_TB_ARCH of Lab02_TB is
         leftButton: in std_logic;
         rightButton: in std_logic;
         bitCount: in std_logic_vector(2 downto 0);
-        leftLeds: out std_logic_vector(15 downto 8);
-        rightLeds: out std_logic_vector(7 downto 0);
+        leftLeds: out std_logic_vector(15 downto 9);
+        rightLeds: out std_logic_vector(6 downto 0);
         whichNum: out std_logic_vector(6 downto 0));
     end component;
     
@@ -189,40 +185,128 @@ begin
     leftLeds => leftLeds,
     whichNum => whichNum);
     
-    -- Update the process more
-    
     process
     begin
         bitCount <= "000";
         leftButton <= '0';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "001";
+        leftButton <= '0';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "010";
+        leftButton <= '0';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "011";
+        leftButton <= '0';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "100";
+        leftButton <= '0';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "101";
+        leftButton <= '0';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "110";
+        leftButton <= '0';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "111";
+        leftButton <= '0';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "000";
+        leftButton <= '1';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "001";
+        leftButton <= '1';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "010";
+        leftButton <= '1';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "011";
+        leftButton <= '1';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "100";
+        leftButton <= '1';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "101";
+        leftButton <= '1';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "110";
+        leftButton <= '1';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "111";
+        leftButton <= '1';
+        rightButton <= '0';
+        wait for 10ns;
+        bitCount <= "000";
+        leftButton <= '0';
+        rightButton <= '1';
+        wait for 10ns;
+        bitCount <= "001";
+        leftButton <= '0';
+        rightButton <= '1';
+        wait for 10ns;
+        bitCount <= "010";
+        leftButton <= '0';
+        rightButton <= '1';
+        wait for 10ns;
+        bitCount <= "011";
+        leftButton <= '0';
+        rightButton <= '1';
+        wait for 10ns;
+        bitCount <= "100";
+        leftButton <= '0';
+        rightButton <= '1';
+        wait for 10ns;
+        bitCount <= "101";
+        leftButton <= '0';
+        rightButton <= '1';
+        wait for 10ns;
+        bitCount <= "110";
+        leftButton <= '0';
+        rightButton <= '1';
+        wait for 10ns;
+        bitCount <= "111";
+        leftButton <= '0';
+        rightButton <= '1';
         wait for 10ns;
         wait;
     end process;
 
 end Lab02_TB_ARCH;
 ```
-
-= Test Bench Results
-
 #pagebreak()
+= Test Bench Results
+#figure(
+    image("./assets/Lab02/Lab2_TB_Results.png")
+)
 
 = Wrapper Design Block
 
 = Wrapper Design Code
 ```vhdl
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 02/20/2026 05:43:44 PM
--- Design Name: 
--- Module Name: Lab02_Basys3 - Lab02_Basys3_ARCH
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
+-- Company: Kennesaw State University
+-- Engineer: Jacob Evans
+-- Create Date: 02/11/2026 02:06:30 PM
+-- Design Name: Lab02_BASYS3
+-- Module Name: Lab02 - Lab02_BASYS3_ARCH
+-- Project Name: Hardware Integration Lab
+-- Target Devices: Basys3 - Artix 7
+-- Description: Wrapper File for the Lab2 Component. Accounts for all 3 switches, all 16 leds, and the most-right 7-Seg Display
 -- 
 -- Revision:
 -- Revision 0.01 - File Created
@@ -240,19 +324,14 @@ entity Lab02_Basys3 is
     led : out std_logic_vector (15 downto 0);
     btnL: in std_logic;
     btnR: in std_logic;
-    seg: out std_logic_vector(6 downto 0)
+    seg: out std_logic_vector(6 downto 0);
+    an: out std_logic_vector(3 downto 0)
   );
   
   
 end Lab02_Basys3;
 
 architecture Lab02_Basys3_ARCH of Lab02_Basys3 is
-    signal leftButton: std_logic := '0';
-    signal rightButton: std_logic := '0';
-    signal bitCount: std_logic_vector(2 downto 0) := "000";
-    signal leftLeds: std_logic_vector(15 downto 8) := "00000000";
-    signal rightLeds: std_logic_vector(7 downto 0) := "00000000";
-    signal whichNum: std_logic_vector(6 downto 0) := "0000000";
     
     --Define Component
     component Lab02
@@ -260,19 +339,26 @@ architecture Lab02_Basys3_ARCH of Lab02_Basys3 is
         leftButton: in std_logic;
         rightButton: in std_logic;
         bitCount: in std_logic_vector(2 downto 0);
-        leftLeds: out std_logic_vector(15 downto 8);
-        rightLeds: out std_logic_vector(7 downto 0);
-        whichNum: out std_logic_vector(6 downto 0));
+        leftLeds: out std_logic_vector(15 downto 9);
+        rightLeds: out std_logic_vector(6 downto 0);
+        whichNum: out std_logic_vector(6 downto 0);
+        an: out std_logic_vector(3 downto 0));
     end component;
 
 begin
+    -- Drive the unused LEDs to 0
+    led(7) <= '0';
+    led(8) <= '0';
+    
     UUT: Lab02 port map(
     leftButton => btnL,
     rightButton => btnR,
     bitCount => sw,
-    rightLeds => led(7 downto 0),
-    leftLeds => led(15 downto 8),
-    whichNum => seg
+    rightLeds => led(6 downto 0),
+    leftLeds => led(15 downto 9),
+    whichNum => seg,
+    an => an
+    
     );
 
 end Lab02_Basys3_ARCH;
