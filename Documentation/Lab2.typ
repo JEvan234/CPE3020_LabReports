@@ -291,11 +291,18 @@ end Lab02_TB_ARCH;
 #pagebreak()
 = Test Bench Results
 #figure(
-    image("./assets/Lab02/Lab2_TB_Results.png")
+    image("./assets/Lab02/Lab2_TB_Results.png"),
+    caption: [Test Bench Results Screenshot]
 )
 
 = Wrapper Design Block
+#figure(
+    image("./assets/Lab02/Wrapper02.svg",
+    width: 110%),
+    caption: [Basys 3 Wrapper Block Diagram]
+)
 
+#pagebreak()
 = Wrapper Design Code
 ```vhdl
 ----------------------------------------------------------------------------------
