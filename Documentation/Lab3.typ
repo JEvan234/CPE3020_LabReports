@@ -17,6 +17,8 @@ Date: 2026 - 02 - 25 \
 = Design Description
 In this lab I used sequential design to implement a lit LED that can "jump" its position across the 16 lights of the Basys 3 Board. In other words, if there is an input at btnL or btnR, then the light to the corresponding direction will be lit and the original will be turned off.
 
+= Component Diagram
+
 = Design Block Diagram
 
 = Design Code
