@@ -26,27 +26,26 @@ entity Practicum2Practice is
   Port (
     switches: in std_logic_vector(2 downto 0);
     load: in std_logic;
-    clear: in std_logic;
+    reset: in std_logic;
     output: out std_logic_vector(2 downto 0);
     clk: in std_logic);
     
 end Practicum2Practice;
 
 architecture Practicum2Practice_ARCH of Practicum2Practice is
-signal reg_value: std_logic_vector(2 downto 0);
 
 begin
-    process(clk)
+    process(clk,reset)
+    variable reg_value: std_logic_vector(2 downto 0);
     begin
         if rising_edge(clk) then
-            if (clear = '1') then
-                reg_value <= "000";
+            if (reset = '1') then
+                reg_value := "000";
             elsif load = '1' then
-                reg_value <= switches;
+                reg_value := switches;
             end if;
         end if;
+        output <= reg_value;
     end process;
-    
-    output <= reg_value;
             
 end Practicum2Practice_ARCH;
