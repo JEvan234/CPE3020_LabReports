@@ -126,13 +126,14 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_1/new/Practicum2Practice_TB.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="Practicum2Practice_TB"/>
+        <Option Name="TopModule" Val="Practicum2Practice_BASYS3"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>

@@ -22,6 +22,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+-- Define the ports of the design (all inputs and output)
+
 entity Practicum2Practice is
   Port (
     switches: in std_logic_vector(2 downto 0);
@@ -34,6 +36,7 @@ end Practicum2Practice;
 
 architecture Practicum2Practice_ARCH of Practicum2Practice is
 
+-- Define the logic, for sequential there will be a process with clk and reset
 begin
     process(clk,reset)
     variable reg_value: std_logic_vector(2 downto 0);
