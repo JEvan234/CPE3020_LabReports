@@ -32,6 +32,8 @@ In this lab I used sequential design to implement a lit LED that can "jump" its 
 
 = Test Bench Code
 
+= Test Bench Results
+
 = Wrapper Block Diagram
 
 = Wrapper Code
