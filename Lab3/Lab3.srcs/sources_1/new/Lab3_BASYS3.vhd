@@ -37,7 +37,9 @@ entity Lab3_BASYS3 is
     btnL : in std_logic;
     btnC : in std_logic;
     btnR : in std_logic;
-    led : out std_logic_vector(15 downto 0)
+    led : out std_logic_vector(15 downto 0);
+    an: out std_logic_vector(3 downto 0);
+    seg: out std_logic_vector(6 downto 0)
     );
 end Lab3_BASYS3;
 
@@ -49,7 +51,9 @@ architecture Lab3_BASYS3_ARCH of Lab3_BASYS3 is
             rightButton : in  std_logic;
             clk         : in  std_logic;
             reset       : in  std_logic;
-            leds        : out std_logic_vector(15 downto 0)
+            leds        : out std_logic_vector(15 downto 0);
+            sevenSegs   : out std_logic_vector(6 downto 0);
+            anodes      : out std_logic_vector(3 downto 0)
         );
     end component;
 
@@ -61,7 +65,9 @@ begin
         rightButton => btnR,
         clk         => clk,
         reset       => btnC,
-        leds        => led
+        leds        => led,
+        sevenSegs   => seg,
+        anodes      => an
         );
 
 end Lab3_BASYS3_ARCH;
