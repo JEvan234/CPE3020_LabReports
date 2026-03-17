@@ -6,7 +6,7 @@
    version="1.1"
    id="svg52"
    sodipodi:docname="Design03.svg"
-   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -21,14 +21,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="true"
-     inkscape:zoom="5.8229016"
-     inkscape:cx="165.38147"
-     inkscape:cy="111.11299"
-     inkscape:window-width="1710"
-     inkscape:window-height="1073"
-     inkscape:window-x="0"
-     inkscape:window-y="39"
-     inkscape:window-maximized="0"
+     inkscape:zoom="11.645803"
+     inkscape:cx="150.741"
+     inkscape:cy="113.21675"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="1072"
+     inkscape:window-y="197"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg52">
     <inkscape:grid
        id="grid1"
@@ -60,8 +60,8 @@
      id="path8"
      sodipodi:nodetypes="cc" />
   <path
-     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.772174;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     d="M 190,95 H 131.32164"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.626917;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     d="M 170,95 H 131.32164"
      id="path9"
      sodipodi:nodetypes="cc" />
   <text
@@ -75,7 +75,7 @@
        id="tspan1154"
        x="173.74379"
        y="76.538734"
-       style="stroke-width:0.376142">LEFT_FUNCTION</tspan></text>
+       style="stroke-width:0.376142">MAIN_FUNCTION</tspan></text>
   <path
      style="fill:#ffffff;stroke:#000000;stroke-width:0.445815"
      d="m 107.05709,91.725809 v 6.548385 h 19.85282 L 131.32164,95 126.90991,91.725809 Z"
@@ -83,14 +83,14 @@
   <text
      xml:space="preserve"
      style="font-size:4.61659px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.432805;stroke-linecap:round;stroke-linejoin:round"
-     x="112.32411"
-     y="94.204964"
+     x="111.06926"
+     y="94.015327"
      id="text2213-7"
      transform="scale(0.9697879,1.0311533)"><tspan
        sodipodi:role="line"
        id="tspan2211-5"
-       x="112.32411"
-       y="94.204964"
+       x="111.06926"
+       y="94.015327"
        style="stroke-width:0.432805">leftButton</tspan></text>
   <path
      style="fill:#ffffff;stroke:#000000;stroke-width:0.789948;stroke-dasharray:none"
@@ -107,27 +107,27 @@
        id="tspan2211-2"
        x="252.19318"
        y="119.92465"
-       style="stroke-width:0.432805">leftLeds</tspan></text>
+       style="stroke-width:0.432805">Leds</tspan></text>
   <path
-     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.772174;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     d="M 196.24678,115.49303 H 137.56842"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.61673;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     d="M 174.71579,104 H 137.28421"
      id="path9-7"
      sodipodi:nodetypes="cc" />
   <path
      style="fill:#ffffff;stroke:#000000;stroke-width:0.496407"
-     d="m 107.15383,112.2482 v 6.48965 h 24.83708 l 5.51935,-3.24482 -5.51935,-3.24483 z"
+     d="m 106.86962,100.75517 v 6.48965 H 131.7067 L 137.22605,104 131.7067,100.75517 Z"
      id="path2-6-6" />
   <text
      xml:space="preserve"
      style="font-size:4.61659px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.432805;stroke-linecap:round;stroke-linejoin:round"
-     x="113.34496"
-     y="114.22098"
+     x="111.06475"
+     y="102.79575"
      id="text2213-7-2"
      transform="scale(0.9697879,1.0311533)"><tspan
        sodipodi:role="line"
        id="tspan2211-5-6"
-       x="113.34496"
-       y="114.22098"
+       x="111.06475"
+       y="102.79575"
        style="stroke-width:0.432805">rightButton</tspan></text>
   <text
      xml:space="preserve"
@@ -137,6 +137,16 @@
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.574811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
      d="m 238.79192,117.19054 -4.06505,7.44988"
      id="path9-73-1-8-3"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.626917;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     d="M 169.33918,115 H 130.66082"
+     id="path9-9"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.626917;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     d="M 169.33918,125 H 130.66082"
+     id="path9-8"
      sodipodi:nodetypes="cc" />
   <rect
      x="158.86429"
@@ -154,13 +164,49 @@
   <text
      xml:space="preserve"
      style="font-size:6.66203px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.624566;stroke-linecap:round;stroke-linejoin:round"
-     x="243.3374"
-     y="114.38834"
+     x="238.85387"
+     y="113.14112"
      id="text2213-12-9-5-7"
      transform="scale(0.95951223,1.0421962)"><tspan
        sodipodi:role="line"
        id="tspan2211-3-2-0-5"
-       x="243.3374"
-       y="114.38834"
-       style="stroke-width:0.624566">8</tspan></text>
+       x="238.85387"
+       y="113.14112"
+       style="stroke-width:0.624566">16</tspan></text>
+  <path
+     style="fill:#ffffff;stroke:#000000;stroke-width:0.445815"
+     d="m 106.39627,111.72581 v 6.54838 h 19.85282 L 130.66082,115 l -4.41173,-3.27419 z"
+     id="path2-6-4" />
+  <text
+     xml:space="preserve"
+     style="font-size:4.61659px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.432805;stroke-linecap:round;stroke-linejoin:round"
+     x="110.3334"
+     y="113.46519"
+     id="text2213-7-5"
+     transform="scale(0.9697879,1.0311533)"><tspan
+       sodipodi:role="line"
+       id="tspan2211-5-5"
+       x="110.3334"
+       y="113.46519"
+       style="stroke-width:0.432805">clk</tspan></text>
+  <path
+     style="fill:#ffffff;stroke:#000000;stroke-width:0.445815"
+     d="m 106.39627,121.72581 v 6.54838 h 19.85282 L 130.66082,125 l -4.41173,-3.27419 z"
+     id="path2-6-2" />
+  <g
+     id="svg52-1"
+     transform="translate(-2.2169425,29.804455)">
+    <text
+       xml:space="preserve"
+       style="font-size:4.61659px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.432805;stroke-linecap:round;stroke-linejoin:round"
+       x="112.32411"
+       y="94.204964"
+       id="text2213-7-7"
+       transform="scale(0.9697879,1.0311533)"><tspan
+         sodipodi:role="line"
+         id="tspan2211-5-1"
+         x="112.32411"
+         y="94.204964"
+         style="stroke-width:0.432805">reset</tspan></text>
+  </g>
 </svg>
