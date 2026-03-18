@@ -22,10 +22,10 @@ In this lab I used sequential design to implement a lit LED that can "jump" its 
   caption: [Component Block Diagram])
 
 = Design Block Diagram
-#figure(image("assets/Lab03/Design03.svg"),
+#figure(image("assets/Lab03/Design03.svg",
+  width: 90%),
   caption: [Design Block Diagram])
 
-#pagebreak()
 = Design Code
 ```vhdl
 ----------------------------------------------------------------------------------
@@ -219,6 +219,9 @@ end Lab3_ARCH;
 ```
 
 = Test Bench Block Diagram
+#figure(image("assets/Lab03/Testbench03.svg",
+  width: 90%),
+  caption: [Test Bench Diagram])
 
 = Test Bench Code
 ```vhdl
@@ -320,6 +323,9 @@ end Lab3_TB_ARCH;
   caption: [Simulation Results])
 
 = Wrapper Block Diagram
+#figure(image("assets/Lab03/Wrapper03.svg",
+  width: 80%),
+  caption: [Wrapper Block Diagram])
 
 = Wrapper Code
 ```vhdl
