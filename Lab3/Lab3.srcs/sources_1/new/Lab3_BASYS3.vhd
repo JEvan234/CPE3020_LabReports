@@ -1,35 +1,17 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Kennesaw State University
+-- Engineer: Jacob Evams
 -- 
 -- Create Date: 03/17/2026 01:17:58 PM
--- Design Name: 
+-- Design Name: Sequential Shifter
 -- Module Name: Lab3_BASYS3 - Lab3_BASYS3_ARCH
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
+-- Target Devices: Artix 7 - Basys 3 FPGA Board
+-- Description: Wrapper file to assign inputs and outputs to the corresponding board buttons and lights.
 -- 
 ----------------------------------------------------------------------------------
 
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity Lab3_BASYS3 is
   Port (
