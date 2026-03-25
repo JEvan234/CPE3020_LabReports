@@ -1,7 +1,7 @@
 // Lab Report 4: Jacob Evans
 
 #set page(paper: "a4")
-#set text(size:32pt)
+#set text(size:32pt, font: "JetBrainsMono NF")
 #set raw(syntaxes: "VHDL.sublime-syntax")
 
 = Lab04
@@ -15,3 +15,19 @@ Date: 2026 - 03 - 21 \
 #pagebreak()
 
 = Design Description
+
+= Component Diagram
+
+= Design Block Diagram
+
+= Design Code
+
+= Simulation Block Diagram
+
+= Simulation Code
+
+= Simulation Results
+
+= Wrapper Block Diagram
+
+= Wrapper Code
