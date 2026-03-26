@@ -20,15 +20,11 @@ This Design feeds a serialized input to the Adafruit Neopixel Light Stick in ord
 #figure(image("assets/Lab04/Component04.svg"),
     caption: [Component Block Diagram])
 = Design Block Diagram
-#figure(image("assets/Lab04/Design04.svg",
-    width: 70%),
-    caption: [Design Block Diagram])
 
-= State Machine Diagram
 #figure(image("assets/Lab04/State04.svg"),
     caption: [State Machine Diagram])
 
-== State Machine Bubble Diagram
+= State Machine Diagram
 #figure(image("assets/Lab04/State_Bubble.svg",
     width: 80%))
 
