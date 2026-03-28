@@ -17,17 +17,18 @@ Date: 2026 - 03 - 21 \
 = Design Description
 This Design feeds a serialized input to the Adafruit Neopixel Light Stick in order for it to display a color in accordance to the 3 input switches input. One switch for each red, green, and blue. Despite having a white (RGBW) model, those inputs will be all set to 0.
 = Component Diagram
-#figure(image("assets/Lab04/Component04.svg"),
+#figure(image("assets/Lab04/Component04.svg",
+    width: 70%),
     caption: [Component Block Diagram])
 = Design Block Diagram
+#figure(image("assets/Lab04/Design04.svg"),
+    caption: [Design Block Diagram])
 
-#figure(image("assets/Lab04/State04.svg"),
-    caption: [State Machine Diagram])
-
-= State Machine Diagram
+== State Machine Bubble Diagram
+//Update the following
 #figure(image("assets/Lab04/State_Bubble.svg",
-    width: 80%))
-
+    width: 80%),
+    caption: [State Machine Bubble Diagram])
 
 = Design Code
 

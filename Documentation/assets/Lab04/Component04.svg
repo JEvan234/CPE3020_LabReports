@@ -82,15 +82,15 @@
     <text
        xml:space="preserve"
        style="font-size:5.28986px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.495926;stroke-linecap:round;stroke-linejoin:round"
-       x="64.150299"
-       y="30.509745"
+       x="67.05352"
+       y="30.597193"
        id="text2213-12-9-5-55"
        transform="scale(0.98917252,1.010946)"><tspan
          sodipodi:role="line"
          id="tspan2211-3-2-0-17"
-         x="64.150299"
-         y="30.509745"
-         style="stroke-width:0.495926">32</tspan></text>
+         x="67.05352"
+         y="30.597193"
+         style="stroke-width:0.495926">3</tspan></text>
     <rect
        x="78.915573"
        y="22.694101"
@@ -115,7 +115,7 @@
          x="95.394714"
          y="28.78739"
          style="stroke-width:0.401375"
-         id="tspan3">dataIn</tspan></text>
+         id="tspan3">switches</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.30423px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.403518;stroke-linecap:round;stroke-linejoin:round"
@@ -143,14 +143,14 @@
     <text
        xml:space="preserve"
        style="font-size:4.30423px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.403518;stroke-linecap:round;stroke-linejoin:round"
-       x="128.1597"
-       y="39.330193"
+       x="124.59561"
+       y="39.508881"
        id="text2217-2"
        transform="scale(0.84173242,1.188026)"><tspan
          sodipodi:role="line"
          id="tspan2215-7"
-         x="128.1597"
-         y="39.330193"
+         x="124.59561"
+         y="39.508881"
          style="stroke-width:0.403518">dataOut</tspan></text>
     <text
        xml:space="preserve"
