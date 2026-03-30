@@ -8,7 +8,7 @@
 LED Light Lab
 #v(200pt)
 #set text(size: 16pt)
-Designer: Jacob Evans \
+Designer: Jacob Evans, Trevor Cooper \
 Class: CPE 3020 \
 Term: Spring 2026 \ 
 Date: 2026 - 03 - 21 \
