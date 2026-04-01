@@ -1,4 +1,4 @@
-// Lab Report 4: Jacob Evans
+// Lab Report 4: Jacob Evans and Trevor Cooper
 
 #set page(paper: "a4")
 #set text(size:32pt, font: "JetBrainsMono NF")
