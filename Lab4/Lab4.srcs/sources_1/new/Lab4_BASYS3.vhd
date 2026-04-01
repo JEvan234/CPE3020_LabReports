@@ -1,17 +1,14 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Kennesaw State University
+-- Engineer: Trevor Cooper, Jacob Evans
 -- 
--- Create Date: 03/31/2026 11:34:12 AM
--- Design Name: 
--- Module Name: rgb_BASYS - rgb_BASYS_ARCH
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Create Date: 03/24/2026 11:08:28 AM
+-- Design Name: Lab4 Component
+-- Module Name: rgb - rgb_ARCH
+-- Project Name: Lab 4 RGB neopixel stick interface
+-- Target Devices: Basys3 - Artix 7
+-- Description: Wrapper file for the Lab 4 rgb component
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
@@ -21,15 +18,6 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity Lab4_BASYS3 is
   Port (
@@ -68,6 +56,5 @@ begin
     JA(0) <= led_out;
     -- prevent floating pins
     JA(7 downto 1) <= (others => '0');
-
 
 end Lab4_BASYS3_ARCH;

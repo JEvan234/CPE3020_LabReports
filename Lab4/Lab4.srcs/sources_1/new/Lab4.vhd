@@ -1,17 +1,16 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Kennesaw State University
+-- Engineer: Trevor Cooper, Jacob Evans
 -- 
 -- Create Date: 03/24/2026 11:08:28 AM
--- Design Name: 
+-- Design Name: Lab4 Component
 -- Module Name: rgb - rgb_ARCH
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name: Lab 4 RGB neopixel stick interface
+-- Target Devices: Basys3 - Artix 7
+-- Description: This Design feeds a serialized input to the Adafruit Neopixel Light Stick in order for it to
+-- display a color in accordance to the 3 input switches input, with each combination 0 through 7 corresponding to a color. 
+-- The current number value will also be displayed on the right digit of the seven segment display interface.
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
@@ -84,7 +83,7 @@ end component;
 
 begin
 
--- 🎨 Switch → Color mapping (RGB format!)
+-- Switch Process
 process(switches)
 begin
     case switches is
@@ -198,7 +197,7 @@ begin
 end process;
 
 -- Assign digits
-digit3 <= "0000";                                -- ignored (blanked)"0" & switches;                        -- switch position
+digit3 <= "0000";                                -- ignored (blanked)"0" & switches;
 digit2 <= "0000";                                -- ignored (blanked)
 digit1 <= "0000";                                -- ignored (blanked)
 digit0 <= "0" & switches;                        -- switch position

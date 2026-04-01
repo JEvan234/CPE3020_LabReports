@@ -1,32 +1,23 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Kennesaw State University
+-- Engineer: Trevor Cooper, Jacob Evans
 -- 
--- Create Date: 03/24/2026 11:31:18 AM
--- Design Name: 
--- Module Name: rgb_TB - rgb_TB_ARCH
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Create Date: 03/24/2026 11:08:28 AM
+-- Design Name: Lab4 Component
+-- Module Name: rgb - rgb_ARCH
+-- Project Name: Lab 4 RGB neopixel stick interface
+-- Target Devices: Basys3 - Artix 7
+-- Description: Test Bench Driver for the Lab 4 rgb component
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
 
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity Lab4_TB is
 --  Port ( );
