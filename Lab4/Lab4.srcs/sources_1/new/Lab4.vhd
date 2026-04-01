@@ -197,7 +197,7 @@ begin
 end process;
 
 -- Assign digits
-digit3 <= "0000";                                -- ignored (blanked)"0" & switches;
+digit3 <= "0000";                                -- ignored (blanked)
 digit2 <= "0000";                                -- ignored (blanked)
 digit1 <= "0000";                                -- ignored (blanked)
 digit0 <= "0" & switches;                        -- switch position
