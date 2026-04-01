@@ -36,7 +36,9 @@ entity Lab4_BASYS3 is
         clk     : in std_logic;                       -- 100 MHz clock
         sw      : in std_logic_vector(2 downto 0);    -- 3 switches
         btnC    : in std_logic;                       -- reset button
-        JA      : out std_logic_vector(7 downto 0)    -- RGB data line
+        JA      : out std_logic_vector(7 downto 0);    -- RGB data line
+        seg: out std_logic_vector(6 downto 0);
+        an: out std_logic_vector(3 downto 0)
     );
 end Lab4_BASYS3;
 
@@ -48,7 +50,9 @@ architecture Lab4_BASYS3_ARCH of Lab4_BASYS3 is
             clock : in std_logic;
             reset : in std_logic;
             switches : in std_logic_vector(2 downto 0);
-            data_out : out std_logic
+            data_out : out std_logic;
+            segments: out std_logic_vector(6 downto 0);
+            anodes: out std_logic_vector(3 downto 0)
         );
     end component;
 begin
@@ -56,7 +60,9 @@ begin
         clock => clk,
         reset => btnC,
         switches => sw,
-        data_out => led_out
+        data_out => led_out,
+        segments => seg,
+        anodes => an
     );
     -- connect to JA
     JA(0) <= led_out;

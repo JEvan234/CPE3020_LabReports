@@ -1,15 +1,17 @@
 ----------------------------------------------------------------------------------
--- Company: Kennesaw State University
--- Engineer: Jacob Evans
+-- Company: 
+-- Engineer: 
 -- 
 -- Create Date: 03/24/2026 11:31:18 AM
--- Design Name: LED light Driver Assignment
--- Module Name: Lab4 Assignment
+-- Design Name: 
+-- Module Name: rgb_TB - rgb_TB_ARCH
 -- Project Name: 
--- Target Devices: Basys 3, Artix 7
+-- Target Devices: 
 -- Tool Versions: 
 -- Description: 
---
+-- 
+-- Dependencies: 
+-- 
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
@@ -21,6 +23,11 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
 entity Lab4_TB is
 --  Port ( );
 end Lab4_TB;
@@ -30,6 +37,8 @@ architecture Lab4_TB_ARCH of Lab4_TB is
     signal reset : std_logic := '1';
     signal switches : std_logic_vector(2 downto 0) := "000";
     signal data_out : std_logic;
+    signal segments: std_logic_vector(6 downto 0);
+    signal anodes: std_logic_vector(3 downto 0);
     
     constant clock_period : time := 10 ns;
     
@@ -38,7 +47,9 @@ architecture Lab4_TB_ARCH of Lab4_TB is
             clock : in std_logic;
             reset : in std_logic;
             switches : in std_logic_vector(2 downto 0);
-            data_out : out std_logic
+            data_out : out std_logic;
+            segments: out std_logic_vector(6 downto 0);
+            anodes: out std_logic_vector(3 downto 0)
         );
     end component;
 begin
@@ -46,7 +57,9 @@ begin
         clock => clock,
         reset => reset,
         switches => switches,
-        data_out => data_out
+        data_out => data_out,
+        segments => segments,
+        anodes => anodes
     );
 
     -- Clock generation
@@ -62,33 +75,34 @@ begin
     stim_proc: process
     begin
         -- Reset
+        reset <= '1';
         wait for 50 ns;
         reset <= '0';
 
         -- Test all 8 switch combinations
         switches <= "000"; -- OFF
-        wait for 200 us;
+        wait for 120 us;
 
         switches <= "001"; -- GREEN
-        wait for 200 us;
+        wait for 120 us;
 
         switches <= "010"; -- RED
-        wait for 200 us;
+        wait for 120 us;
 
         switches <= "011"; -- BLUE
-        wait for 200 us;
+        wait for 120 us;
 
         switches <= "100"; -- YELLOW
-        wait for 200 us;
+        wait for 120 us;
 
         switches <= "101"; -- MAGENTA
-        wait for 200 us;
+        wait for 120 us;
 
         switches <= "110"; -- CYAN
-        wait for 200 us;
+        wait for 120 us;
 
         switches <= "111"; -- WHITE
-        wait for 200 us;
+        wait for 120 us;
 
         wait;
     end process;
