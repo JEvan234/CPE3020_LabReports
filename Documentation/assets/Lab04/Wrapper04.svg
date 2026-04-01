@@ -21,9 +21,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="true"
-     inkscape:zoom="10.044719"
-     inkscape:cx="221.65876"
-     inkscape:cy="93.631289"
+     inkscape:zoom="2.5111798"
+     inkscape:cx="61.923086"
+     inkscape:cy="10.15459"
      inkscape:window-width="2560"
      inkscape:window-height="1369"
      inkscape:window-x="1072"
@@ -91,16 +91,16 @@
        id="tspan1-1-2-7-7">3</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:10.1202px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.94877;stroke-linecap:round;stroke-linejoin:round"
-     x="296.36642"
-     y="112.63918"
+     style="font-size:8.44681px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.791889;stroke-linecap:round;stroke-linejoin:round"
+     x="264.71686"
+     y="117.12927"
      id="text2213-12-9"
-     transform="scale(0.95448044,1.0476904)"><tspan
+     transform="scale(0.99089074,1.009193)"><tspan
        sodipodi:role="line"
        id="tspan2211-3-2"
-       x="296.36642"
-       y="112.63918"
-       style="stroke-width:0.94877">JA(0)</tspan></text>
+       x="264.71686"
+       y="117.12927"
+       style="stroke-width:0.791889">JA(0)</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:10.1202px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.94877;stroke-linecap:round;stroke-linejoin:round"
@@ -140,14 +140,14 @@
   <text
      xml:space="preserve"
      style="font-size:10.1202px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.94877;stroke-linecap:round;stroke-linejoin:round"
-     x="292.05493"
-     y="82.879494"
+     x="266.84973"
+     y="83.773453"
      id="text2213-12-9-57"
      transform="scale(0.95448044,1.0476904)"><tspan
        sodipodi:role="line"
        id="tspan2211-3-2-6"
-       x="292.05493"
-       y="82.879494"
+       x="266.84973"
+       y="83.773453"
        style="stroke-width:0.94877">seg</tspan></text>
   <path
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.873187;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
@@ -174,14 +174,14 @@
   <text
      xml:space="preserve"
      style="font-size:10.1202px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.94877;stroke-linecap:round;stroke-linejoin:round"
-     x="292.30063"
-     y="61.192429"
+     x="266.79538"
+     y="61.922634"
      id="text2213-12-9-57-3"
      transform="scale(0.95448044,1.0476904)"><tspan
        sodipodi:role="line"
        id="tspan2211-3-2-6-1"
-       x="292.30063"
-       y="61.192429"
+       x="266.79538"
+       y="61.922634"
        style="stroke-width:0.94877">an</tspan></text>
   <path
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.13282;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
@@ -364,5 +364,5 @@
        id="tspan10-2-5"
        x="282.95261"
        y="87.598717"
-       style="stroke-width:0.947539">led_out</tspan></text>
+       style="stroke-width:0.947539">ledOut</tspan></text>
 </svg>

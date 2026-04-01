@@ -31,7 +31,7 @@ entity Lab4_BASYS3 is
 end Lab4_BASYS3;
 
 architecture Lab4_BASYS3_ARCH of Lab4_BASYS3 is
-    signal led_out : std_logic;
+    signal ledOut : std_logic;
     
     component Lab4 
         Port(
@@ -48,12 +48,12 @@ begin
         clock => clk,
         reset => btnC,
         switches => sw,
-        dataOut => led_out,
+        dataOut => ledOut,
         segments => seg,
         anodes => an
     );
     -- connect to JA
-    JA(0) <= led_out;
+    JA(0) <= ledOut;
     -- prevent floating pins
     JA(7 downto 1) <= (others => '0');
 

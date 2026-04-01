@@ -83,7 +83,7 @@ end component;
 
 begin
 
--- Switch Process
+-- SWITCH_PROCESS
 process(switches)
 begin
     case switches is
@@ -102,7 +102,7 @@ end process;
 
 
 
--- State Machine
+-- STATE_MACHINE
 process(clock, reset)
 begin
     if (reset = '1') then
