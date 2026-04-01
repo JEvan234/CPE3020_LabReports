@@ -38,7 +38,7 @@ architecture Lab4_BASYS3_ARCH of Lab4_BASYS3 is
             clock : in std_logic;
             reset : in std_logic;
             switches : in std_logic_vector(2 downto 0);
-            data_out : out std_logic;
+            dataOut : out std_logic;
             segments: out std_logic_vector(6 downto 0);
             anodes: out std_logic_vector(3 downto 0)
         );
@@ -48,7 +48,7 @@ begin
         clock => clk,
         reset => btnC,
         switches => sw,
-        data_out => led_out,
+        dataOut => led_out,
         segments => seg,
         anodes => an
     );

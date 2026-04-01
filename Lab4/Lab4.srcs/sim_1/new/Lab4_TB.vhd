@@ -27,7 +27,7 @@ architecture Lab4_TB_ARCH of Lab4_TB is
     signal clock : std_logic := '0';
     signal reset : std_logic := '1';
     signal switches : std_logic_vector(2 downto 0) := "000";
-    signal data_out : std_logic;
+    signal dataOut : std_logic;
     signal segments: std_logic_vector(6 downto 0);
     signal anodes: std_logic_vector(3 downto 0);
     
@@ -38,7 +38,7 @@ architecture Lab4_TB_ARCH of Lab4_TB is
             clock : in std_logic;
             reset : in std_logic;
             switches : in std_logic_vector(2 downto 0);
-            data_out : out std_logic;
+            dataOut : out std_logic;
             segments: out std_logic_vector(6 downto 0);
             anodes: out std_logic_vector(3 downto 0)
         );
@@ -48,7 +48,7 @@ begin
         clock => clock,
         reset => reset,
         switches => switches,
-        data_out => data_out,
+        dataOut => dataOut,
         segments => segments,
         anodes => anodes
     );

@@ -27,7 +27,7 @@ entity Lab4 is
     clock     : in std_logic;  -- 100 MHz
     reset     : in std_logic;
     switches  : in std_logic_vector(2 downto 0); -- 3 switches
-    data_out  : out std_logic;
+    dataOut  : out std_logic;
     
     segments: out std_logic_vector(6 downto 0);
     anodes: out std_logic_vector(3 downto 0)
@@ -107,7 +107,7 @@ process(clock, reset)
 begin
     if (reset = '1') then
         state <= IDLE;
-        data_out <= '0';
+        dataOut <= '0';
         clk_cnt <= 0;
         bit_cnt <= 0;
         shift_reg <= (others => '0');
@@ -116,7 +116,7 @@ begin
         case state is
 
             when IDLE =>
-                data_out <= '0';
+                dataOut <= '0';
                 state <= LOAD;  -- auto-trigger
 
             when LOAD =>
@@ -126,7 +126,7 @@ begin
                 state <= SEND_HIGH;
 
             when SEND_HIGH =>
-                data_out <= '1';
+                dataOut <= '1';
 
                 if (shift_reg(23) = '1') then
                     if (clk_cnt = T1H) then
@@ -145,7 +145,7 @@ begin
                 end if;
 
             when SEND_LOW =>
-                data_out <= '0';
+                dataOut <= '0';
 
                 if (shift_reg(23) = '1') then
                     if (clk_cnt = T1L) then
@@ -184,7 +184,7 @@ begin
                 end if;
 
             when RESET_LATCH =>
-                data_out <= '0';
+                dataOut <= '0';
                 if (clk_cnt = RESET_TIME) then
                     clk_cnt <= 0;
                     state <= LOAD; -- continuously refresh LED

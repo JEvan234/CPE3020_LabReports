@@ -62,7 +62,7 @@ entity Lab4 is
     clock     : in std_logic;  -- 100 MHz
     reset     : in std_logic;
     switches  : in std_logic_vector(2 downto 0); -- 3 switches
-    data_out  : out std_logic;
+    dataOut  : out std_logic;
     
     segments: out std_logic_vector(6 downto 0);
     anodes: out std_logic_vector(3 downto 0)
@@ -142,7 +142,7 @@ process(clock, reset)
 begin
     if (reset = '1') then
         state <= IDLE;
-        data_out <= '0';
+        dataOut <= '0';
         clk_cnt <= 0;
         bit_cnt <= 0;
         shift_reg <= (others => '0');
@@ -151,7 +151,7 @@ begin
         case state is
 
             when IDLE =>
-                data_out <= '0';
+                dataOut <= '0';
                 state <= LOAD;  -- auto-trigger
 
             when LOAD =>
@@ -161,7 +161,7 @@ begin
                 state <= SEND_HIGH;
 
             when SEND_HIGH =>
-                data_out <= '1';
+                dataOut <= '1';
 
                 if (shift_reg(23) = '1') then
                     if (clk_cnt = T1H) then
@@ -180,7 +180,7 @@ begin
                 end if;
 
             when SEND_LOW =>
-                data_out <= '0';
+                dataOut <= '0';
 
                 if (shift_reg(23) = '1') then
                     if (clk_cnt = T1L) then
@@ -219,7 +219,7 @@ begin
                 end if;
 
             when RESET_LATCH =>
-                data_out <= '0';
+                dataOut <= '0';
                 if (clk_cnt = RESET_TIME) then
                     clk_cnt <= 0;
                     state <= LOAD; -- continuously refresh LED
@@ -297,7 +297,7 @@ architecture Lab4_TB_ARCH of Lab4_TB is
     signal clock : std_logic := '0';
     signal reset : std_logic := '1';
     signal switches : std_logic_vector(2 downto 0) := "000";
-    signal data_out : std_logic;
+    signal dataOut : std_logic;
     signal segments: std_logic_vector(6 downto 0);
     signal anodes: std_logic_vector(3 downto 0);
     
@@ -308,7 +308,7 @@ architecture Lab4_TB_ARCH of Lab4_TB is
             clock : in std_logic;
             reset : in std_logic;
             switches : in std_logic_vector(2 downto 0);
-            data_out : out std_logic;
+            dataOut : out std_logic;
             segments: out std_logic_vector(6 downto 0);
             anodes: out std_logic_vector(3 downto 0)
         );
@@ -318,7 +318,7 @@ begin
         clock => clock,
         reset => reset,
         switches => switches,
-        data_out => data_out,
+        dataOut => dataOut,
         segments => segments,
         anodes => anodes
     );
@@ -421,7 +421,7 @@ architecture Lab4_BASYS3_ARCH of Lab4_BASYS3 is
             clock : in std_logic;
             reset : in std_logic;
             switches : in std_logic_vector(2 downto 0);
-            data_out : out std_logic;
+            dataOut : out std_logic;
             segments: out std_logic_vector(6 downto 0);
             anodes: out std_logic_vector(3 downto 0)
         );
@@ -431,7 +431,7 @@ begin
         clock => clk,
         reset => btnC,
         switches => sw,
-        data_out => led_out,
+        dataOut => led_out,
         segments => seg,
         anodes => an
     );
