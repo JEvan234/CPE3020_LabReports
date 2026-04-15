@@ -1,3 +1,32 @@
+// Final Project: Trevor Cooper and Jacob Evans
+
+#set page(paper: "a4")
+#set text(size:32pt, font: "JetBrainsMono NF")
+#set raw(syntaxes: "VHDL.sublime-syntax")
+
+= Project
+LED Light Strip Pong Game
+#v(200pt)
+#set text(size: 16pt)
+Designer: Trevor Cooper and Jacob Evans \
+Class: CPE 3020 \
+Term: Spring 2026 \ 
+Date: 2026 - 04 - 03 \
+#pagebreak()
+
+= Design Description
+In this design, We will be building on from our lab 4 assignment and allow for all 8 lights to be lit up as a single background color, selectable from the right switches. On top of this we will add a "ball" that has its own selectable color and its position on the strip can be changed from a button input. All button inputs will be debounced and metastable.
+
+= Component Diagram
+#figure(image("assets/Project/Component05.svg",
+  width: 100%))
+
+= Design Block Diagram
+#figure(image("assets/Project/Design05.svg",
+  width: 100%))
+
+= Package Code
+```vhdl
 ----------------------------------------------------------------------------------
 -- Company: Kennesaw State University
 -- Engineer: Trevor Cooper and Jacob Evans 
@@ -44,3 +73,18 @@ package body stabilization_package is
     
     
 end package body;
+```
+
+= Design Code
+
+= Simulation Block Diagram
+#figure(image("assets/Project/Testbench05.svg",
+  width: 100%))
+
+= Simulation Code
+
+= Simulation Results
+
+= Wrapper Block Diagram
+
+= Wrapper Code
