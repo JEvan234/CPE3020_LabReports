@@ -1,13 +1,13 @@
 // Final Project: Trevor Cooper and Jacob Evans
 
 #set page(paper: "a4")
-#set text(size:32pt, font: "JetBrainsMono NF")
+#set text(size:24pt, font: "JetBrainsMono NF")
 #set raw(syntaxes: "VHDL.sublime-syntax")
 
 = Project
 LED Light Strip Pong Game
 #v(200pt)
-#set text(size: 16pt)
+#set text(size: 12pt)
 Designer: Trevor Cooper and Jacob Evans \
 Class: CPE 3020 \
 Term: Spring 2026 \ 
