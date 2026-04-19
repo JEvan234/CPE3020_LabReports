@@ -9,8 +9,10 @@ You will get some errors with file paths for Wrapper files
 Example process to use (be sure to declare all signals above the process)
 process(clock, reset)
 begin
-    metastabilize1(inputSignal, intermidiateSignal);
-    metastabilize2(intermediatesignal, bouncedSignal);
-    debounce(bouncedSignal, stablePrev, countInSignal, countMaxSignal (acts as variable), dbOutputSignal, countNextSignal);
-    countInSignal <- countnextSignal;
+    if rising_edge(clock) then
+        metastabilize1(inputSignal, intermidiateSignal);
+        metastabilize2(intermediatesignal, bouncedSignal);
+        debounce(bouncedSignal, stablePrev, countInSignal, countMaxSignal (acts as variable), dbOutputSignal, countNextSignal);
+        countInSignal <- countnextSignal;
+    end if;
 end process;
