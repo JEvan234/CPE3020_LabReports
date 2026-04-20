@@ -14,7 +14,7 @@ begin
         metastabilize1(inputSignal, intermidiateSignal);
         metastabilize2(intermediatesignal, bouncedSignal);
         debounce(bouncedSignal, stablePrev, countInSignal, countMaxSignal (acts as variable), dbOutputSignal, countNextSignal);
-        countInSignal <- countnextSignal;
+        countInSignal <= countnextSignal;
     end if;
 end process;
 ```
