@@ -15,7 +15,9 @@ Date: 2026 - 04 - 03 \
 #pagebreak()
 
 = Design Description
-In this design, We will be building on from our lab 4 assignment and allow for all 8 lights to be lit up as a single background color, selectable from the right switches. On top of this we will add a "ball" that has its own selectable color and its position on the strip can be changed from a button input. All button inputs will be debounced and metastable.
+In this design, We will be building on from our lab 4 assignment and allow for all 8 lights to be lit up as a single background color, 
+selectable from the right switches. On top of this we will add a "ball" that has its own selectable color and its position on the strip 
+can be changed from a button input. All button inputs will be debounced and metastable.
 
 = Component Diagram
 #figure(image("assets/Project/Component05.svg",
@@ -24,6 +26,11 @@ In this design, We will be building on from our lab 4 assignment and allow for a
 = Design Block Diagram
 #figure(image("assets/Project/Design05.svg",
   width: 100%))
+
+= Design Code
+```vhdl
+-- Design Code goes here
+```
 
 = Package Code
 ```vhdl
@@ -50,41 +57,108 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 package stabilization_package is 
     constant ACTIVE: std_logic;
-    function metastabilize (unstableInput: std_logic; reset: std_logic; signal clock: std_logic) return std_logic;
+    
+    procedure metastabilize1 (
+        signal unstableInput: in std_logic;
+        signal stage1Output: out std_logic
+    );
+    
+    -- To use this multistage procedure in metastability, use a signal as the stage1 input and stage one output
+    
+    procedure metastabilize2 (
+        signal stage1Input: in std_logic;
+        signal safeOutput: out std_logic
+    );
+    
+    procedure debounce (
+        signal bouncedInput        : in  std_logic;
+        signal stablePrev  : in  std_logic;
+        signal countIn     : in  integer;
+        signal countMax    : in  integer;
+
+        signal dbOutput  : out std_logic;
+        signal countNext   : out integer
+    );
+    
 end package;
 
 
 package body stabilization_package is
     constant ACTIVE: std_logic := '1';
-
-    function metastabilize (unstableInput: std_logic; reset: std_logic; signal clock: std_logic) return std_logic is
-        variable safeOutput: std_logic;
-        variable unsafeOutput: std_logic;
-    begin
-        if (reset=ACTIVE) then
-            safeOutput := not ACTIVE;
-            unsafeOutput := not ACTIVE;
-        elsif (rising_edge(clock)) then
-            safeOutput := unsafeOutput;
-            unsafeOutput := unstableInput;
-        end if;
-            return safeOutput;
-    end function;
     
+    -- MetaStability
+    
+    procedure metastabilize1 (
+        signal unstableInput: in  std_logic;
+        signal stage1Output: out std_logic
+        ) is
+    begin
+        stage1Output <= unstableInput;
+    end procedure;
+
+
+    procedure metastabilize2 (
+        signal stage1Input: in  std_logic;
+        signal safeOutput: out std_logic
+        ) is
+    begin
+        safeOutput <= stage1Input;
+    end procedure;
+    
+    
+    
+    -- Debouncing
+
+    procedure debounce (
+        signal bouncedInput: in  std_logic;
+        signal stablePrev: in  std_logic;
+        signal countIn: in  integer;
+        signal countMax: in  integer;
+
+        signal dbOutput: out std_logic;
+        signal countNext: out integer
+    ) is
+    begin
+
+        -- default behavior: keep current state
+        dbOutput <= stablePrev;
+        countNext  <= countIn;
+
+    -- if input differs from current stable value, reset counter
+        if bouncedInput /= stablePrev then
+            countNext <= 0;
+
+        else
+            if countIn < countMax then
+                countNext <= countIn + 1;
+            else
+                dbOutput <= bouncedInput;
+            end if;
+        end if;
+
+    end procedure;    
     
 end package body;
-```
 
-= Design Code
+-- Refer to github readme for example usecase
+```
 
 = Simulation Block Diagram
 #figure(image("assets/Project/Testbench05.svg",
   width: 100%))
 
 = Simulation Code
+```vhdl
+-- Test Bench code goes here
+```
 
 = Simulation Results
+// Talk to trevor about simulation
 
 = Wrapper Block Diagram
+//Make Wrapper
 
 = Wrapper Code
+```vhdl
+-- Wrapper Code goes here
+```
