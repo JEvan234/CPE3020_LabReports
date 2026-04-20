@@ -6,6 +6,7 @@ Lab Reports for my CPE3020 (VHDL Programming) Course. All written reports are wr
 You will get some errors with file paths for Wrapper files
 
 # Example process for debouncing
+```vhdl
 Example process to use (be sure to declare all signals above the process)
 process(clock, reset)
 begin
@@ -16,3 +17,4 @@ begin
         countInSignal <- countnextSignal;
     end if;
 end process;
+```
