@@ -156,7 +156,9 @@ end package body;
 // Talk to trevor about simulation
 
 = Wrapper Block Diagram
-//Make Wrapper
+#figure(image("assets/Project/Wrapper05.svg",
+    width: 80%),
+    caption: [Wrapper Block Diagram])
 
 = Wrapper Code
 ```vhdl

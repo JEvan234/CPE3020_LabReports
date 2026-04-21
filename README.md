@@ -7,7 +7,7 @@ You will get some errors with file paths for Wrapper files
 
 # Example process for debouncing
 ```vhdl
-Example process to use (be sure to declare all signals above the process)
+--Example process to use (be sure to declare all signals above the process)
 process(clock, reset)
 begin
     if rising_edge(clock) then
