@@ -1,16 +1,14 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Kennesaw State University
+-- Engineer: Trevor Cooper and Jacob Evans
 -- 
--- Create Date: 04/20/2026 02:05:46 PM
--- Design Name: 
+-- Create Date: 04/11/2026 02:05:46 PM
+-- Design Name: CPE3020 Project
 -- Module Name: final_TB - final_TB_ARCH
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
+-- Project Name: RGB light strip pong game
+-- Target Devices: Basys3 - Artix 7
+-- Description: Test bench file for the CPE 3020 project. Uses loops to emulate clock cycle and
+-- iterate through the switches.
 -- 
 -- Revision:
 -- Revision 0.01 - File Created
@@ -22,11 +20,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity final_TB is
 --  Port ( );

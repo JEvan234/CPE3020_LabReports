@@ -1,14 +1,13 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Kennesaw State University
+-- Engineer: Trevor Cooper and Jacob Evans
 -- 
--- Create Date: 04/20/2026 02:15:31 PM
--- Design Name: 
+-- Create Date: 04/11/2026 02:15:31 PM
+-- Design Name: CPE3020 Project
 -- Module Name: final_BASYS - final_BASYS_ARCH
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
+-- Project Name: RGB light strip pong game
+-- Target Devices: Basys3 - Artix 7
+-- Description: Basys 3 Wrapper for the final project
 -- 
 -- Dependencies: 
 -- 
@@ -21,15 +20,6 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity final_BASYS is
   Port (

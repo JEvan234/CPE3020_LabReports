@@ -1,16 +1,15 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: Kennesaw State University
+-- Engineer: Trevor Cooper and Jacob Evans
 -- 
--- Create Date: 04/20/2026 01:50:32 PM
--- Design Name: 
+-- Create Date: 04/11/2026 01:50:32 PM
+-- Design Name: CPE3020 Project
 -- Module Name: final - final_ARCH
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
+-- Project Name: RGB light strip pong game
+-- Target Devices: Basys3 - Artix 7
+-- Description: In this design, We will be building on from our lab 4 assignment and allow for all 8 lights to be lit up as a single background color, 
+-- selectable from the right switches. On top of this we will add a "ball" that has its own selectable color and its position on the strip 
+-- can be changed from a button input. All button inputs will be debounced and metastable.
 -- 
 -- Revision:
 -- Revision 0.01 - File Created
@@ -21,13 +20,9 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+-- Our Package
 use work.stabilization_package.all;
 use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity final is
   Port (
@@ -52,18 +47,18 @@ architecture final_ARCH of final is
     signal ballPos : integer range 0 to 7 := 0;
     
     --NEW debounce signals
-    signal left_db_prev, right_db_prev : std_logic := '0';
+    signal leftDbPrev, rightDbPrev : std_logic := '0';
     
     -- LEFT button signals
-    signal left_sync0, left_sync1 : std_logic := '0';
-    signal left_db : std_logic := '0';
-    signal left_cnt : integer := 0;
+    signal leftSync0, leftSync1 : std_logic := '0';
+    signal leftDb : std_logic := '0';
+    signal leftCount : integer := 0;
     signal leftPulse : std_logic := '0';
 
     -- RIGHT button signals
-    signal right_sync0, right_sync1 : std_logic := '0';
-    signal right_db : std_logic := '0';
-    signal right_cnt : integer := 0;
+    signal rightSync0, right_sync1 : std_logic := '0';
+    signal rightDb : std_logic := '0';
+    signal rightCount : integer := 0;
     signal rightPulse : std_logic := '0';
 
     -- debounce constant
@@ -87,8 +82,8 @@ architecture final_ARCH of final is
     
     -- State machine(button)
     type states_t is (IDLE, MOVE_LEFT, MOVE_RIGHT);
-    signal current_state: states_t;
-    signal next_state: states_t;
+    signal currentState: states_t;
+    signal nextState: states_t;
     
     -- SevenSeg Signals
     signal digit3 : std_logic_vector(3 downto 0);
@@ -154,82 +149,82 @@ begin
     
 end process;
 
--- debouncing
-process(clock)
+-- debouncing and metastability (from package)
+process(clock, reset)
 begin
     if rising_edge(clock) then
     -- Left Button
 
         -- metastability
-        metastabilize1(leftButton, left_sync0);
-        metastabilize2(left_sync0, left_sync1);
+        metastabilize1(leftButton, leftSync0);
+        metastabilize2(leftSync0, leftSync1);
 
         -- debounce
         debounce(
-            left_sync1,
-            left_db,
-            left_cnt,
+            leftSync1,
+            leftDbPrev,
+            leftCount,
             DB_MAX_SIG,
-            left_db,
-            left_cnt
+            leftDb,
+            leftCount
         );
         
         
         -- Pulse (one clock when pressed)
         leftPulse <= '0'; --default
-        if (left_db = '1' and left_db_prev = '0') then
+        if (leftDb = '1' and leftDbPrev = '0') then
             leftPulse <= '1';
         end if;
-        left_db_prev <= left_db;
+        leftDbPrev <= leftDb;
 
         
     -- Right button
         
         -- metastability
-        metastabilize1(rightButton, right_sync0);
-        metastabilize2(right_sync0, right_sync1);
+        metastabilize1(rightButton, rightSync0);
+        metastabilize2(rightSync0, right_sync1);
 
         -- debounce
         debounce(
             right_sync1,
-            right_db,
-            right_cnt,
+            rightDbPrev,
+            rightCount,
             DB_MAX_SIG,
-            right_db,
-            right_cnt
+            rightDb,
+            rightCount
         );
         
         -- Pulse (one clock when pressed)
         rightPulse <= '0'; --default
-        if (right_db = '1' and right_db_prev = '0') then
+        if (rightDb = '1' and rightDbPrev = '0') then
             rightPulse <= '1';
         end if;
-        right_db_prev <= right_db;
+        rightDbPrev <= rightDb;
 
     end if;
 end process;
 
 -- next state logic
-process(current_state, leftPulse, rightPulse)
+process(currentState, leftPulse, rightPulse)
 begin
-    case current_state is
+    case currentState is
         when IDLE =>
             if leftPulse = '1' then
-                next_state <= MOVE_LEFT;
+                nextState <= MOVE_LEFT;
             elsif rightPulse = '1' then
-                next_state <= MOVE_RIGHT;
+                nextState <= MOVE_RIGHT;
             else
-                next_state <= IDLE;
+                nextState <= IDLE;
             end if;
             
         when MOVE_LEFT =>
-            next_state <= IDLE;
+            nextState <= IDLE;
 
         when MOVE_RIGHT =>
-            next_state <= IDLE;
+            nextState <= IDLE;
 
         when others =>
-            next_state <= IDLE;
+            nextState <= IDLE;
     end case;
 end process;
 
@@ -237,13 +232,13 @@ end process;
 process(clock, reset)
 begin
     if reset = '1' then
-        current_state <= IDLE;
+        currentState <= IDLE;
         ballPos <= 0;
 
     elsif rising_edge(clock) then
-        current_state <= next_state;
+        currentState <= nextState;
 
-        case next_state is
+        case nextState is
             when MOVE_LEFT =>
                 if ballPos = 0 then
                     ballPos <= 7;
