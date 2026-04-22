@@ -73,34 +73,35 @@ package body stabilization_package is
     
     -- Debouncing
 
-    procedure debounce (
-        signal bouncedInput: in  std_logic;
-        signal stablePrev: in  std_logic;
-        signal countIn: in  integer;
-        signal countMax: in  integer;
+procedure debounce (
+    signal bouncedInput : in  std_logic;
+    signal stablePrev   : in  std_logic;
+    signal countIn      : in  integer;
+    signal countMax     : in  integer;
 
-        signal dbOutput: out std_logic;
-        signal countNext: out integer
-    ) is
-    begin
+    signal dbOutput     : out std_logic;
+    signal countNext    : out integer
+) is
+begin
 
-        -- default behavior: keep current state
-        dbOutput <= stablePrev;
-        countNext  <= countIn;
+    -- If input equals current stable value → reset counter
+    if bouncedInput = stablePrev then
+        countNext <= 0;
+        dbOutput  <= stablePrev;
 
-    -- if input differs from current stable value, reset counter
-        if bouncedInput /= stablePrev then
-            countNext <= 0;
-
+    else
+        -- Input different → count how long it stays different
+        if countIn < countMax then
+            countNext <= countIn + 1;
+            dbOutput  <= stablePrev;
         else
-            if countIn < countMax then
-                countNext <= countIn + 1;
-            else
-                dbOutput <= bouncedInput;
-            end if;
+            -- Stable long enough → accept new value
+            dbOutput  <= bouncedInput;
+            countNext <= 0;
         end if;
+    end if;
 
-    end procedure;    
+end procedure;   
     
 end package body;
 

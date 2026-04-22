@@ -21,26 +21,100 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 package stabilization_package is 
     constant ACTIVE: std_logic;
-    function metastabilize (unstableInput: std_logic; reset: std_logic; signal clock: std_logic) return std_logic;
+    
+    procedure metastabilize1 (
+        signal unstableInput: in std_logic;
+        signal stage1Output: out std_logic
+    );
+    
+    -- To use this multistage procedure in metastability, use a signal as the stage1 input and stage one output
+    
+    procedure metastabilize2 (
+        signal stage1Input: in std_logic;
+        signal safeOutput: out std_logic
+    );
+    
+    procedure debounce (
+        signal bouncedInput        : in  std_logic;
+        signal stablePrev  : in  std_logic;
+        signal countIn     : in  integer;
+        signal countMax    : in  integer;
+
+        signal dbOutput  : out std_logic;
+        signal countNext   : out integer
+    );
+    
 end package;
 
 
 package body stabilization_package is
     constant ACTIVE: std_logic := '1';
-
-    function metastabilize (unstableInput: std_logic; reset: std_logic; signal clock: std_logic) return std_logic is
-        variable safeOutput: std_logic;
-        variable unsafeOutput: std_logic;
-    begin
-        if (reset=ACTIVE) then
-            safeOutput := not ACTIVE;
-            unsafeOutput := not ACTIVE;
-        elsif (rising_edge(clock)) then
-            safeOutput := unsafeOutput;
-            unsafeOutput := unstableInput;
-        end if;
-            return safeOutput;
-    end function;
     
+    -- MetaStability
+    
+    procedure metastabilize1 (
+        signal unstableInput: in  std_logic;
+        signal stage1Output: out std_logic
+        ) is
+    begin
+        stage1Output <= unstableInput;
+    end procedure;
+
+
+    procedure metastabilize2 (
+        signal stage1Input: in  std_logic;
+        signal safeOutput: out std_logic
+        ) is
+    begin
+        safeOutput <= stage1Input;
+    end procedure;
+    
+    
+    
+    -- Debouncing
+
+procedure debounce (
+    signal bouncedInput : in  std_logic;
+    signal stablePrev   : in  std_logic;
+    signal countIn      : in  integer;
+    signal countMax     : in  integer;
+
+    signal dbOutput     : out std_logic;
+    signal countNext    : out integer
+) is
+begin
+
+    -- If input equals current stable value → reset counter
+    if bouncedInput = stablePrev then
+        countNext <= 0;
+        dbOutput  <= stablePrev;
+
+    else
+        -- Input different → count how long it stays different
+        if countIn < countMax then
+            countNext <= countIn + 1;
+            dbOutput  <= stablePrev;
+        else
+            -- Stable long enough → accept new value
+            dbOutput  <= bouncedInput;
+            countNext <= 0;
+        end if;
+    end if;
+
+end procedure;   
     
 end package body;
+
+--
+-- Example process to use (be sure to declare all signals above)
+-- process(clock, reset)
+-- begin
+--    metastabilize1(inputSignal, intermidiateSignal);
+--    metastabilize2(intermediatesignal, bouncedSignal);
+--    debounce(bouncedSignal, stablePrev, countInSignal, countMaxSignal (acts as variable), dbOutputSignal, countNextSignal);
+--    countInSignal <- countnextSignal;
+--end process;
+--
+--
+--
+--
