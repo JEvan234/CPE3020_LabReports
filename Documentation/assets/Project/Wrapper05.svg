@@ -21,11 +21,11 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="true"
-     inkscape:zoom="3.5513445"
-     inkscape:cx="20.97797"
-     inkscape:cy="68.283997"
-     inkscape:window-width="2560"
-     inkscape:window-height="1440"
+     inkscape:zoom="5.0223596"
+     inkscape:cx="275.26902"
+     inkscape:cy="107.71829"
+     inkscape:window-width="1261"
+     inkscape:window-height="1397"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -64,7 +64,7 @@
      sodipodi:nodetypes="cc" />
   <path
      style="fill:#ffffff;stroke:#000000;stroke-width:0.953865"
-     d="m 259.75675,108.41638 v 13.16724 h 45.19902 L 315,115 304.95577,108.41638 Z"
+     d="m 250.40049,109 v 13.16724 h 45.19902 L 305.64374,115.58362 295.59951,109 Z"
      id="path2-61"
      sodipodi:nodetypes="cccccc" />
   <path
@@ -97,14 +97,14 @@
   <text
      xml:space="preserve"
      style="font-size:8.44681px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.791889;stroke-linecap:round;stroke-linejoin:round"
-     x="264.71686"
-     y="117.12927"
+     x="255.2746"
+     y="117.70758"
      id="text2213-12-9"
      transform="scale(0.99089074,1.009193)"><tspan
        sodipodi:role="line"
        id="tspan2211-3-2"
-       x="264.71686"
-       y="117.12927"
+       x="255.2746"
+       y="117.70758"
        style="stroke-width:0.791889">JA(0)</tspan></text>
   <text
      xml:space="preserve"
@@ -368,18 +368,6 @@
        y="15.658901"
        style="stroke-width:0.947539"
        id="tspan1-2">UUT</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:10.1072px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.947539;stroke-linecap:round;stroke-linejoin:round"
-     x="282.95261"
-     y="87.598717"
-     id="text10-8-1"
-     transform="scale(0.78788019,1.2692285)"><tspan
-       sodipodi:role="line"
-       id="tspan10-2-5"
-       x="282.95261"
-       y="87.598717"
-       style="stroke-width:0.947539">ledOut</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:10.1072px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.947539;stroke-linecap:round;stroke-linejoin:round"
